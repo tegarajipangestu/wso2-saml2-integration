@@ -1,5 +1,7 @@
 <?php
 
+namespace WebServices;
+
 class QueryRumpunResponse
 {
 
@@ -26,7 +28,7 @@ class QueryRumpunResponse
 
     /**
      * @param Rumpun $Rumpun
-     * @return QueryRumpunResponse
+     * @return \WebServices\QueryRumpunResponse
      */
     public function setRumpun($Rumpun)
     {

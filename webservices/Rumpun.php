@@ -1,5 +1,7 @@
 <?php
 
+namespace WebServices;
+
 class Rumpun
 {
 
@@ -40,7 +42,7 @@ class Rumpun
 
     /**
      * @param int $ID
-     * @return Rumpun
+     * @return \WebServices\Rumpun
      */
     public function setID($ID)
     {
@@ -58,7 +60,7 @@ class Rumpun
 
     /**
      * @param string $Nama
-     * @return Rumpun
+     * @return \WebServices\Rumpun
      */
     public function setNama($Nama)
     {
@@ -76,7 +78,7 @@ class Rumpun
 
     /**
      * @param string $NomorUrut
-     * @return Rumpun
+     * @return \WebServices\Rumpun
      */
     public function setNomorUrut($NomorUrut)
     {

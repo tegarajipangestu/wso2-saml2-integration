@@ -1,5 +1,7 @@
 <?php
 
+namespace WebServices;
+
 class QueryJabatanResponse
 {
 
@@ -26,7 +28,7 @@ class QueryJabatanResponse
 
     /**
      * @param Jabatan $Jabatan
-     * @return QueryJabatanResponse
+     * @return \WebServices\QueryJabatanResponse
      */
     public function setJabatan($Jabatan)
     {

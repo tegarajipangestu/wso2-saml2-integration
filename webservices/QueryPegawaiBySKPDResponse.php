@@ -1,5 +1,7 @@
 <?php
 
+namespace WebServices;
+
 class QueryPegawaiBySKPDResponse
 {
 
@@ -26,7 +28,7 @@ class QueryPegawaiBySKPDResponse
 
     /**
      * @param Pegawai $Pegawai
-     * @return QueryPegawaiBySKPDResponse
+     * @return \WebServices\QueryPegawaiBySKPDResponse
      */
     public function setPegawai($Pegawai)
     {

@@ -1,5 +1,7 @@
 <?php
 
+namespace WebServices;
+
 class Jabatan
 {
 
@@ -68,7 +70,7 @@ class Jabatan
 
     /**
      * @param int $ID
-     * @return Jabatan
+     * @return \WebServices\Jabatan
      */
     public function setID($ID)
     {
@@ -86,7 +88,7 @@ class Jabatan
 
     /**
      * @param Rumpun $Rumpun
-     * @return Jabatan
+     * @return \WebServices\Jabatan
      */
     public function setRumpun($Rumpun)
     {
@@ -104,7 +106,7 @@ class Jabatan
 
     /**
      * @param string $Nama
-     * @return Jabatan
+     * @return \WebServices\Jabatan
      */
     public function setNama($Nama)
     {
@@ -122,7 +124,7 @@ class Jabatan
 
     /**
      * @param string $Kualifikasi
-     * @return Jabatan
+     * @return \WebServices\Jabatan
      */
     public function setKualifikasi($Kualifikasi)
     {
@@ -140,7 +142,7 @@ class Jabatan
 
     /**
      * @param string $Keterangan
-     * @return Jabatan
+     * @return \WebServices\Jabatan
      */
     public function setKeterangan($Keterangan)
     {
@@ -158,7 +160,7 @@ class Jabatan
 
     /**
      * @param string $Kode
-     * @return Jabatan
+     * @return \WebServices\Jabatan
      */
     public function setKode($Kode)
     {
@@ -176,7 +178,7 @@ class Jabatan
 
     /**
      * @param int $Nilai
-     * @return Jabatan
+     * @return \WebServices\Jabatan
      */
     public function setNilai($Nilai)
     {

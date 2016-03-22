@@ -1,5 +1,7 @@
 <?php
 
+namespace WebServices;
+
 class Pegawai
 {
 
@@ -59,7 +61,7 @@ class Pegawai
 
     /**
      * @param string $NIP
-     * @return Pegawai
+     * @return \WebServices\Pegawai
      */
     public function setNIP($NIP)
     {
@@ -77,7 +79,7 @@ class Pegawai
 
     /**
      * @param string $Nama
-     * @return Pegawai
+     * @return \WebServices\Pegawai
      */
     public function setNama($Nama)
     {
@@ -95,7 +97,7 @@ class Pegawai
 
     /**
      * @param string $Golongan
-     * @return Pegawai
+     * @return \WebServices\Pegawai
      */
     public function setGolongan($Golongan)
     {
@@ -113,7 +115,7 @@ class Pegawai
 
     /**
      * @param string $UnitKerja
-     * @return Pegawai
+     * @return \WebServices\Pegawai
      */
     public function setUnitKerja($UnitKerja)
     {
@@ -131,7 +133,7 @@ class Pegawai
 
     /**
      * @param string $Pangkat
-     * @return Pegawai
+     * @return \WebServices\Pegawai
      */
     public function setPangkat($Pangkat)
     {
@@ -149,7 +151,7 @@ class Pegawai
 
     /**
      * @param string $Jabatan
-     * @return Pegawai
+     * @return \WebServices\Pegawai
      */
     public function setJabatan($Jabatan)
     {

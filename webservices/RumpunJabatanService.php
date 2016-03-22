@@ -1,22 +1,24 @@
 <?php
 
-class RumpunJabatan extends \SoapClient
+namespace WebServices;
+
+class RumpunJabatanService extends \SoapClient
 {
 
     /**
      * @var array $classmap The defined classes
      */
     private static $classmap = array (
-  'QueryRumpunResponse' => '\\QueryRumpunResponse',
-  'Rumpun' => '\\Rumpun',
-  'CreateRumpunResponse' => '\\CreateRumpunResponse',
-  'ModifyRumpunResponse' => '\\ModifyRumpunResponse',
-  'RemoveRumpunResponse' => '\\RemoveRumpunResponse',
-  'QueryJabatanResponse' => '\\QueryJabatanResponse',
-  'RemoveJabatanResponse' => '\\RemoveJabatanResponse',
-  'ModifyJabatanResponse' => '\\ModifyJabatanResponse',
-  'CreateJabatanResponse' => '\\CreateJabatanResponse',
-  'Jabatan' => '\\Jabatan',
+  'QueryRumpunResponse' => 'WebServices\\QueryRumpunResponse',
+  'Rumpun' => 'WebServices\\Rumpun',
+  'CreateRumpunResponse' => 'WebServices\\CreateRumpunResponse',
+  'ModifyRumpunResponse' => 'WebServices\\ModifyRumpunResponse',
+  'RemoveRumpunResponse' => 'WebServices\\RemoveRumpunResponse',
+  'QueryJabatanResponse' => 'WebServices\\QueryJabatanResponse',
+  'RemoveJabatanResponse' => 'WebServices\\RemoveJabatanResponse',
+  'ModifyJabatanResponse' => 'WebServices\\ModifyJabatanResponse',
+  'CreateJabatanResponse' => 'WebServices\\CreateJabatanResponse',
+  'Jabatan' => 'WebServices\\Jabatan',
 );
 
     /**
@@ -35,7 +37,7 @@ class RumpunJabatan extends \SoapClient
   'features' => 1,
 ), $options);
       if (!$wsdl) {
-        $wsdl = 'http://dev.divusi.com/services/RumpunJabatan?WSDL';
+        $wsdl = 'http://dev.divusi.com/services/RumpunJabatan?wsdl';
       }
       parent::__construct($wsdl, $options);
     }

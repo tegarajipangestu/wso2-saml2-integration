@@ -1,5 +1,7 @@
 <?php
 
+namespace WebServices;
+
 class QueryPejabatBySKPDResponse
 {
 
@@ -26,7 +28,7 @@ class QueryPejabatBySKPDResponse
 
     /**
      * @param Pegawai $Pegawai
-     * @return QueryPejabatBySKPDResponse
+     * @return \WebServices\QueryPejabatBySKPDResponse
      */
     public function setPegawai($Pegawai)
     {

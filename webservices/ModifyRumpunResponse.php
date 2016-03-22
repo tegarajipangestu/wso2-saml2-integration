@@ -1,5 +1,7 @@
 <?php
 
+namespace WebServices;
+
 class ModifyRumpunResponse
 {
 
@@ -33,7 +35,7 @@ class ModifyRumpunResponse
 
     /**
      * @param boolean $Status
-     * @return ModifyRumpunResponse
+     * @return \WebServices\ModifyRumpunResponse
      */
     public function setStatus($Status)
     {
@@ -51,7 +53,7 @@ class ModifyRumpunResponse
 
     /**
      * @param string $Message
-     * @return ModifyRumpunResponse
+     * @return \WebServices\ModifyRumpunResponse
      */
     public function setMessage($Message)
     {

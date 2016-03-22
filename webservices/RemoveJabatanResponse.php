@@ -1,5 +1,7 @@
 <?php
 
+namespace WebServices;
+
 class RemoveJabatanResponse
 {
 
@@ -33,7 +35,7 @@ class RemoveJabatanResponse
 
     /**
      * @param boolean $Status
-     * @return RemoveJabatanResponse
+     * @return \WebServices\RemoveJabatanResponse
      */
     public function setStatus($Status)
     {
@@ -51,7 +53,7 @@ class RemoveJabatanResponse
 
     /**
      * @param string $Message
-     * @return RemoveJabatanResponse
+     * @return \WebServices\RemoveJabatanResponse
      */
     public function setMessage($Message)
     {

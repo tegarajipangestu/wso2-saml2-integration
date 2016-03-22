@@ -30,5 +30,25 @@ Route::group(['middleware' => ['web']], function () {
     //
 });
 
+/*
+Route::group(['generate-wsdl', function() {
+	Route::get('/{wsdlUrl}', 'GenerateWsdlController@index');
+});
+*/
 
-Route::get('example/{wsdlUrl}', 'ExampleController@index');
+Route::get('generate-wsdl', 'GenerateWsdlController@index');
+Route::group(['prefix' => 'example'], function() {
+	Route::get('/', function() {
+		return view('example');
+	});
+	Route::group(['prefix' => 'rumpun-jabatan'], function() {
+		Route::get('query-rumpun', 'ExampleRumpunJabatanController@queryRumpun');
+		Route::get('query-jabatan', 'ExampleRumpunJabatanController@queryJabatan');
+	});
+	Route::group(['prefix' => 'pegawai'], function() {
+		Route::get('query-pegawai', 'ExamplePegawaiController@queryPegawai');
+		Route::get('query-atasan', 'ExamplePegawaiController@queryAtasan');
+		Route::get('query-skpd', 'ExamplePegawaiController@querySKPD');
+		Route::get('query-pejabat-by-skpd', 'ExamplePegawaiController@queryPejabatBySKPD');
+	});
+});

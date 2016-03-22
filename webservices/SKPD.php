@@ -1,5 +1,7 @@
 <?php
 
+namespace WebServices;
+
 class SKPD
 {
 
@@ -33,7 +35,7 @@ class SKPD
 
     /**
      * @param int $ID
-     * @return SKPD
+     * @return \WebServices\SKPD
      */
     public function setID($ID)
     {
@@ -51,7 +53,7 @@ class SKPD
 
     /**
      * @param string $Nama
-     * @return SKPD
+     * @return \WebServices\SKPD
      */
     public function setNama($Nama)
     {

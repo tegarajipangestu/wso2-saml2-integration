@@ -1,5 +1,7 @@
 <?php
 
+namespace WebServices;
+
 class QuerySKPDResponse
 {
 
@@ -26,7 +28,7 @@ class QuerySKPDResponse
 
     /**
      * @param SKPD $SKPD
-     * @return QuerySKPDResponse
+     * @return \WebServices\QuerySKPDResponse
      */
     public function setSKPD($SKPD)
     {

@@ -1,5 +1,7 @@
 <?php
 
+namespace WebServices;
+
 class CreateJabatanResponse
 {
 
@@ -33,7 +35,7 @@ class CreateJabatanResponse
 
     /**
      * @param boolean $Status
-     * @return CreateJabatanResponse
+     * @return \WebServices\CreateJabatanResponse
      */
     public function setStatus($Status)
     {
@@ -51,7 +53,7 @@ class CreateJabatanResponse
 
     /**
      * @param string $Message
-     * @return CreateJabatanResponse
+     * @return \WebServices\CreateJabatanResponse
      */
     public function setMessage($Message)
     {
