@@ -37,6 +37,12 @@ Route::group(['generate-wsdl', function() {
 */
 
 Route::get('generate-wsdl', 'GenerateWsdlController@index');
+Route::get('/login', function() {
+		return Saml2::login(URL::full());
+	});
+Route::get('/logout', function() {
+	return Saml2::logout();
+});
 Route::group(['prefix' => 'example'], function() {
 	Route::get('/', function() {
 		return view('example');
