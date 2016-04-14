@@ -1,7 +1,7 @@
 <?php
 
 //This is variable is an example - Just make sure that the urls in the 'idp' config are ok.
-$idp_host = 'https://dev.divusi.com/samlsso';
+$idp_host = 'https://172.17.0.42/samlsso';
 
 return $settings = array(
     /*****
@@ -119,8 +119,8 @@ return $settings = array(
          *  Instead of use the whole x509cert you can use a fingerprint
          *  (openssl x509 -noout -fingerprint -in "idp.crt" to generate it)
          */
-         // 'certFingerprint' => '6bf8e136eb36d4a56ea05c7ae4b9a45b63bf975d',
-         'certFingerprint' => '30620ebdf70857ccd503669C296f30d214f5a3aa',
+         'certFingerprint' => '6bf8e136eb36d4a56ea05c7ae4b9a45b63bf975d',
+         // 'certFingerprint' => '30620ebdf70857ccd503669C296f30d214f5a3aa',
          // 'certFingerprint' => '30620EBDF70857CCD503669C296F30D214F5A3AA'
 
     ),
