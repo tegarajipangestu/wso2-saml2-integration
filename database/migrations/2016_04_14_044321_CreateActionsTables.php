@@ -16,6 +16,7 @@ class CreateActionsTables extends Migration
             $table->increments('id');
             $table->string('controllerName');
             $table->string('methodName');
+            $table->timestamps();
         });
     }
 
