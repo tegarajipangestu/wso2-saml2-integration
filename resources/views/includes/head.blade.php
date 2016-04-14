@@ -1,4 +1,3 @@
-<head>
   <meta charset="utf-8" />
   <title>Bandung Web Kit | BDGWEBKIT</title>
   <meta name="description" content="Bandung Web Kit" />
@@ -10,6 +9,3 @@
 
   <link rel="stylesheet" href="css/font.css" type="text/css" />
   <link rel="stylesheet" href="css/style.css" type="text/css" />
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,400italic,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-</head>
-
