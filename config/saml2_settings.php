@@ -1,7 +1,8 @@
 <?php
 
 //This is variable is an example - Just make sure that the urls in the 'idp' config are ok.
-$idp_host = 'https://172.17.0.42/samlsso';
+// $idp_host = 'https://172.17.0.42/samlsso';
+$idp_host = 'https://dev.divusi.com/samlsso';
 
 return $settings = array(
     /*****
@@ -32,7 +33,7 @@ return $settings = array(
     /**
      * Where to redirect after login if no other option was provided
      */
-    'errorRoute' => '/',
+    'errorRoute' => '/error',
 
 
 

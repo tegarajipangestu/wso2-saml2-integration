@@ -5,15 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Role;
 
 class RolesController extends Controller
 {
     public function index() {
-
-    }
-
-    public function new() {
-
+        $roles = Role::all();
+        dd($roles);
+        return view ('roles.index', ['roles' => $roles]);
     }
 
     public function create() {

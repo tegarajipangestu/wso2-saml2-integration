@@ -4,7 +4,7 @@
   <div class="col-md-12">
     <div class="panel panel-default">
       <div class="panel-heading font-semibold">
-        User Table
+        Role Table
       </div>
       <div class="row wrapper-sm">
         <div class="col-sm-5">
@@ -36,14 +36,14 @@
                   <input type="checkbox"><i></i>
                 </label>
               </th>
-              <th>Nama</th>
+              <th>Name</th>
             </tr>
           </thead>
           <tbody>
-            @foreach ($users as $user)
+            @foreach ($roles as $role)
             <tr>
               <td><label class="checkbox-inline "><input type="checkbox" name="post[]"><i></i></label></td>
-              <td>{{$user->name}}</td>
+              <td>{{$role->name}}</td>
             </tr>
             @endforeach
           </tbody>

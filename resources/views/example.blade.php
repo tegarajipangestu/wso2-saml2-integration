@@ -58,7 +58,6 @@
                     <a href="/example/pegawai/query-skpd">QuerySKPD</a><br />
                     <a href="/example/pegawai/query-pejabat-by-skpd/?id=2">QueryPejabatBySKPD</a><br>
                     <a href="/login">Login Example</a>
-                    <p>{{var_dump(Session::all())}}</p>
                 </p>
             </div>
         </div>

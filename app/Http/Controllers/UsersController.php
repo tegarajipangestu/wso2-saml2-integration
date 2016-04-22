@@ -11,11 +11,11 @@ class UsersController extends Controller
 {
     public function index() {
         $users = User::all();
-        return view ('users.index', $users);
+        return view ('users.index', ['users' => $users]);
     }
 
     public function create() {
-
+        
     }
 
     public function store() {

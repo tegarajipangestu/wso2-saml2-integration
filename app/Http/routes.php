@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/', 'PagesController@index');
+Route::get('/', 'PagesController@index')->middleware('auth');
 Route::resource('users', 'UsersController');
+Route::resource('roles', 'RolesController');
 
 /*
 |--------------------------------------------------------------------------
