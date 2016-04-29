@@ -19,13 +19,11 @@
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-Route::group(['middleware' => ['web']], function () {
-	Route::get('/', 'PagesController@index')->middleware('auth');
+Route::group(['middleware' => 'web'], function () {
+	Route::auth();
+	Route::get('/', 'PagesController@index');
 	Route::resource('users', 'UsersController');
 	Route::resource('roles', 'RolesController');
-	Route::get('/check_session', function() {
-		dd(session('IdPSessionIndex'));
-	});
 	Route::get('generate-wsdl', 'GenerateWsdlController@index');
 	Route::get('/login', function() {
 			return Saml2::login(URL::full());
@@ -35,7 +33,8 @@ Route::group(['middleware' => ['web']], function () {
 	});
 	Route::group(['prefix' => 'example'], function() {
 		Route::get('/', function() {
-			return view('example');
+			$user = Auth::user();
+			return view('example',['user'=> $user]);
 		});
 		Route::group(['prefix' => 'rumpun-jabatan'], function() {
 			Route::get('query-rumpun', 'ExampleRumpunJabatanController@queryRumpun');

@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
+    protected $guard = 'web';
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller
@@ -28,7 +29,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/example';
 
     /**
      * Create a new authentication controller instance.
