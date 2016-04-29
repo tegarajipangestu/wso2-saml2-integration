@@ -17,5 +17,19 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'email' => $faker->safeEmail,
         'password' => bcrypt(str_random(10)),
         'remember_token' => str_random(10),
+        'roles_id' => rand(1,10),        
+    ];
+});
+
+$factory->define(App\Role::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+    ];
+});
+
+$factory->define(App\Action::class, function (Faker\Generator $faker) {
+    return [
+        'methodName' => $faker->name,
+        'controllerName' => $faker->name,
     ];
 });
