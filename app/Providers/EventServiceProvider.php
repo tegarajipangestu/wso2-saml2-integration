@@ -7,7 +7,7 @@ use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvi
 use Event;
 use Debugbar;
 use Aacotroneo\Saml2\Events\Saml2LoginEvent;
-use Auth;
+use Illuminate\Http\Request;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -17,8 +17,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\SamlAuthenticated' => [
-            'App\Listeners\SamlAuth',
+        'Aacotroneo\Saml2\Events\Saml2LoginEvent' => [
+            'App\Listeners\Saml2LoginListener',
         ],
     ];
 
@@ -38,7 +38,14 @@ class EventServiceProvider extends ServiceProvider
                 'attributes' => $user->getAttributes(),
                 'assertion' => $user->getRawSamlAssertion()
             ];
-            Debugbar::info($event);
+            Debugbar::info($user->getAttributes());
+            session(['id' => $user->getUserId()]);
+            session(['attributes' => $user->getAttributes()]);
+            session(['assertion' => $user->getRawSamlAssertion()]);
+            session(['IdPSessionIndex' => $user->getAuth()->getSessionIndex()]);
+            // $_SESSION['IdPSessionIndex'] = $event->getSessionIndex();
+            Debugbar::info($user->getAuth()->getSessionIndex());
+            Debugbar::info($user);
             // $laravelUser = //find user by ID or attribute
              //if it does not exist create it and go on  or show an error message
             // Auth::login($userData);

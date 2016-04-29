@@ -8,7 +8,7 @@ use App\Http\Requests;
 
 class PagesController extends Controller
 {
-    public function index() {
+    public function index(Request $request) {
     	return view('index');
     }
 

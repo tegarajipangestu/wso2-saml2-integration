@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Routes File
@@ -10,11 +9,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
-Route::get('/', 'PagesController@index')->middleware('auth');
-Route::resource('users', 'UsersController');
-Route::resource('roles', 'RolesController');
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -25,36 +19,38 @@ Route::resource('roles', 'RolesController');
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-
 Route::group(['middleware' => ['web']], function () {
-    //
+	Route::get('/', 'PagesController@index')->middleware('auth');
+	Route::resource('users', 'UsersController');
+	Route::resource('roles', 'RolesController');
+	Route::get('/check_session', function() {
+		dd(session('IdPSessionIndex'));
+	});
+	Route::get('generate-wsdl', 'GenerateWsdlController@index');
+	Route::get('/login', function() {
+			return Saml2::login(URL::full());
+		});
+	Route::get('/logout', function() {
+		return Saml2::logout();
+	});
+	Route::group(['prefix' => 'example'], function() {
+		Route::get('/', function() {
+			return view('example');
+		});
+		Route::group(['prefix' => 'rumpun-jabatan'], function() {
+			Route::get('query-rumpun', 'ExampleRumpunJabatanController@queryRumpun');
+			Route::get('query-jabatan', 'ExampleRumpunJabatanController@queryJabatan');
+		});
+		Route::group(['prefix' => 'pegawai'], function() {
+			Route::get('query-pegawai', 'ExamplePegawaiController@queryPegawai');
+			Route::get('query-atasan', 'ExamplePegawaiController@queryAtasan');
+			Route::get('query-skpd', 'ExamplePegawaiController@querySKPD');
+			Route::get('query-pejabat-by-skpd', 'ExamplePegawaiController@queryPejabatBySKPD');
+		});
+	});
 });
-
 /*
 Route::group(['generate-wsdl', function() {
 	Route::get('/{wsdlUrl}', 'GenerateWsdlController@index');
 });
 */
-
-Route::get('generate-wsdl', 'GenerateWsdlController@index');
-Route::get('/login', function() {
-		return Saml2::login(URL::full());
-	});
-Route::get('/logout', function() {
-	return Saml2::logout();
-});
-Route::group(['prefix' => 'example'], function() {
-	Route::get('/', function() {
-		return view('example');
-	});
-	Route::group(['prefix' => 'rumpun-jabatan'], function() {
-		Route::get('query-rumpun', 'ExampleRumpunJabatanController@queryRumpun');
-		Route::get('query-jabatan', 'ExampleRumpunJabatanController@queryJabatan');
-	});
-	Route::group(['prefix' => 'pegawai'], function() {
-		Route::get('query-pegawai', 'ExamplePegawaiController@queryPegawai');
-		Route::get('query-atasan', 'ExamplePegawaiController@queryAtasan');
-		Route::get('query-skpd', 'ExamplePegawaiController@querySKPD');
-		Route::get('query-pejabat-by-skpd', 'ExamplePegawaiController@queryPejabatBySKPD');
-	});
-});

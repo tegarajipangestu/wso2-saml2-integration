@@ -11,7 +11,6 @@ class RolesController extends Controller
 {
     public function index() {
         $roles = Role::all();
-        dd($roles);
         return view ('roles.index', ['roles' => $roles]);
     }
 
