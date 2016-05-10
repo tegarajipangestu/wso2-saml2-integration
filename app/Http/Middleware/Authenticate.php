@@ -24,7 +24,7 @@ class Authenticate
                 return response('Unauthorized.', 401);
             } else {
                 // return redirect()->guest('login');
-                // return Saml2::login(URL::full());
+                return Saml2::login(URL::full());
             }
         }
         return $next($request);

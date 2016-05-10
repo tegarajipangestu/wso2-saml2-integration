@@ -45,7 +45,8 @@ class Saml2LoginListener
         $profile = array(
           'saml_id' => $user->getUserId(),
           'email' => $this->getClaimOrDefault($attributes, self::CLAIM_EMAIL_ADDRESS),
-          'role' => $this->getClaimOrDefault($attributes, self::CLAIM_ROLE)
+          'role' => $this->getClaimOrDefault($attributes, self::CLAIM_ROLE),
+          'session_index' => $user->getSessionIndex()
         );
         // In case you want to persist user info in database
         $laravelUser = User::where('email','=',$profile['email'])->first();
