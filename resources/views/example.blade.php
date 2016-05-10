@@ -75,7 +75,8 @@
                     <a href="/example/pegawai/query-atasan/?nip=197808272007011003">QueryAtasan</a><br />
                     <a href="/example/pegawai/query-skpd">QuerySKPD</a><br />
                     <a href="/example/pegawai/query-pejabat-by-skpd/?id=2">QueryPejabatBySKPD</a><br>
-                    <a href="/login">Login Example</a>
+                    <a href="/login">Login</a>
+                    <a href="/logout">Logout</a>
                 </p>
             </div>
         </div>
