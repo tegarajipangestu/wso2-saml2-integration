@@ -19,7 +19,7 @@
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-Route::group(['middleware' => ['web','auth']], function () {
+Route::group(['middleware' => ['web']], function () {
 	Route::auth();
 	Route::get('/', 'PagesController@index');
 	Route::resource('users', 'UsersController');
@@ -35,7 +35,7 @@ Route::group(['middleware' => ['web','auth']], function () {
 	Route::group(['prefix' => 'example'], function() {
 		Route::get('/', function() {
 			$user = Auth::user();
-			return view('example',['user'=> $user]);
+			return view('example',['user'=> $user]);				
 		});
 		Route::group(['prefix' => 'rumpun-jabatan'], function() {
 			Route::get('query-rumpun', 'ExampleRumpunJabatanController@queryRumpun');

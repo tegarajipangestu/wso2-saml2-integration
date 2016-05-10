@@ -60,9 +60,14 @@
         <div class="container">
             <div class="content">
                 <div class="title">Example</div>
+                @if ($user)
                 <p>Hallo {{$user->email}}</p>
                 <p>Role kamu :  {{$user->role}}</p>
                 <p>Id kamu :  {{$user->saml_id}}</p>
+                @else
+                <p>Hallo Guest!</p>
+                <p>Silahkan login</p>
+                @endif
                 <p>
                     <a href="/example/rumpun-jabatan/query-rumpun">QueryRumpun</a><br />
                     <a href="/example/rumpun-jabatan/query-jabatan">QueryJabatan</a><br />

@@ -2,9 +2,13 @@
 
 namespace App\Listeners;
 
-use App\Events\Aacotroneo\Saml2\Events\Saml2LogoutEvent;
+use Aacotroneo\Saml2\Events\Saml2LogoutEvent;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use App\User;
+use Auth;
+use Session;
+
 
 class Saml2LogoutListener
 {
