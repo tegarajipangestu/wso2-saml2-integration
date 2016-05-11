@@ -49,21 +49,7 @@ class Saml2LoginListener
           'session_index' => $user->getSessionIndex()
         );
 
-        // In case you want to persist user info in database
         $laravelUser = User::updateOrCreate($profile);
-        // $laravelUser->fill($profile);
-        // $laravelUser->save();
-
-        // if (!isset($laravelUser)) {
-        //     $laravelUser = new User($profile);
-        // }
-        // else {
-
-        // }
-        // $laravelUser->save();
-
-        // Here we save the received nameId and sessionIndex needed later for the LogoutRequest
-        // Session::put('name_id', $user->getNameId());
         Session::put('session_index', $user->getSessionIndex());
 
         Auth::login($laravelUser);
