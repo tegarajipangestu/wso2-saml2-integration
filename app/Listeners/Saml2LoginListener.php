@@ -7,6 +7,8 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Session;
 use Aacotroneo\Saml2\Events\Saml2LoginEvent;
 use App\User;
+use App\UserRole;
+use App\Role;
 use Auth;
 
 class Saml2LoginListener
@@ -44,15 +46,24 @@ class Saml2LoginListener
         $attributes = $user->getAttributes();
         preg_match('/WSO2.ORG\/(.*?)@(.*)/',$user->getUserId(),$matches);
         
+        $roles = explode(',', $this->getClaimOrDefault($attributes, self::CLAIM_ROLE));
+
         $profile = array(
           'saml_id' => $user->getUserId(),
           'email' => $this->getClaimOrDefault($attributes, self::CLAIM_EMAIL_ADDRESS),
-          'role' => $this->getClaimOrDefault($attributes, self::CLAIM_ROLE),
+          // 'role' => $this->getClaimOrDefault($attributes, self::CLAIM_ROLE),
           'session_index' => $user->getSessionIndex(),
           'name' => $matches[1]
         );
 
         $laravelUser = User::updateOrCreate($profile);
+        // dd($laravelUser);
+        foreach ($roles as $role) {
+          $createdRole = Role::firstOrNew(array('name' => $role));
+          $createdRole->save();
+          UserRole::firstOrCreate(array('user_id' => $laravelUser->id, 'role_id' => $createdRole->id));
+        }
+
         Session::put('session_index', $user->getSessionIndex());
 
         Auth::login($laravelUser);
