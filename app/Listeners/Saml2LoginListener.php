@@ -61,6 +61,7 @@ class Saml2LoginListener
         foreach ($roles as $role) {
           $createdRole = Role::firstOrNew(array('name' => $role));
           $createdRole->save();
+          // $laravelUser->roles()->attach($createdRole->id);
           UserRole::firstOrCreate(array('user_id' => $laravelUser->id, 'role_id' => $createdRole->id));
         }
 

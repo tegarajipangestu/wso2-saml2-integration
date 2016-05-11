@@ -17,7 +17,6 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('saml_id');
             $table->string('email')->unique();
-            $table->string('role');
             $table->string('remember_token');            
             $table->string('session_index');            
             $table->timestamps();

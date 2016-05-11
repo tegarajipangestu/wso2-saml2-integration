@@ -33,8 +33,14 @@ Route::group(['middleware' => ['web']], function () {
 	});
 	Route::group(['prefix' => 'example'], function() {
 		Route::get('/', function() {
-			$user = Auth::user();
-			return view('example',['user'=> $user]);				
+			if (Auth::check()) {
+				$user = Auth::user();			
+				$roles = $user->roles()->get();
+				return view('example',['user'=> $user, 'roles'=> $roles]);								
+			} 
+			else {
+				return view('example');								
+			}
 		});
 		Route::group(['prefix' => 'rumpun-jabatan'], function() {
 			Route::get('query-rumpun', 'ExampleRumpunJabatanController@queryRumpun');

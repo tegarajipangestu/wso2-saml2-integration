@@ -60,11 +60,14 @@
         <div class="container">
             <div class="content">
                 <div class="title">Example</div>
-                @if ($user)
-                <p>Hallo {{$user->name}}</p>
-                <p>Role kamu :  {{$user->role}}</p>
-                <p>Email kamu :  {{$user->email}}</p>
-                <p>Id kamu :  {{$user->saml_id}}</p>
+                @if (Auth::check())
+                    <p>Hallo {{$user->name}}</p>
+                    <p>Email kamu :  {{$user->email}}</p>
+                    <p>Id kamu :  {{$user->saml_id}}</p>
+                    <p>Role kamu : </p>
+                    @foreach ($roles as $role)
+                        <p>{{$role->name}}</p>
+                    @endforeach
                 @else
                 <p>Hallo Guest!</p>
                 <p>Silahkan login</p>
@@ -76,7 +79,7 @@
                     <a href="/example/pegawai/query-atasan/?nip=197808272007011003">QueryAtasan</a><br />
                     <a href="/example/pegawai/query-skpd">QuerySKPD</a><br />
                     <a href="/example/pegawai/query-pejabat-by-skpd/?id=2">QueryPejabatBySKPD</a><br>
-                    @if ($user)
+                    @if (Auth::check())
                     <a href="/logout">Logout</a><br>
                     @else
                     <a href="/login">Login</a>
