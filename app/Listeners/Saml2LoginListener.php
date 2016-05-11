@@ -42,11 +42,14 @@ class Saml2LoginListener
     {
         $user = $event->getSaml2User();
         $attributes = $user->getAttributes();
+        preg_match('/WSO2.ORG\/(.*?)@(.*)/',$user->getUserId(),$matches);
+        
         $profile = array(
           'saml_id' => $user->getUserId(),
           'email' => $this->getClaimOrDefault($attributes, self::CLAIM_EMAIL_ADDRESS),
           'role' => $this->getClaimOrDefault($attributes, self::CLAIM_ROLE),
-          'session_index' => $user->getSessionIndex()
+          'session_index' => $user->getSessionIndex(),
+          'name' => $matches[1]
         );
 
         $laravelUser = User::updateOrCreate($profile);

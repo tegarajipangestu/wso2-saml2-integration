@@ -61,8 +61,9 @@
             <div class="content">
                 <div class="title">Example</div>
                 @if ($user)
-                <p>Hallo {{$user->email}}</p>
+                <p>Hallo {{$user->name}}</p>
                 <p>Role kamu :  {{$user->role}}</p>
+                <p>Email kamu :  {{$user->email}}</p>
                 <p>Id kamu :  {{$user->saml_id}}</p>
                 @else
                 <p>Hallo Guest!</p>
