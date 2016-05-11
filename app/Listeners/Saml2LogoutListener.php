@@ -30,6 +30,7 @@ class Saml2LogoutListener
      */
     public function handle(Saml2LogoutEvent $event)
     {
+        // dd($event);
         Auth::logout();
         Session::save();
     }

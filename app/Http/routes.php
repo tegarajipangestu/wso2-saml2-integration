@@ -20,7 +20,6 @@
 |
 */
 Route::group(['middleware' => ['web']], function () {
-	Route::auth();
 	Route::get('/', 'PagesController@index');
 	Route::resource('users', 'UsersController');
 	Route::resource('roles', 'RolesController');

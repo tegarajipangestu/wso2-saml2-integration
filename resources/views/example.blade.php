@@ -76,9 +76,9 @@
                     <a href="/example/pegawai/query-skpd">QuerySKPD</a><br />
                     <a href="/example/pegawai/query-pejabat-by-skpd/?id=2">QueryPejabatBySKPD</a><br>
                     @if ($user)
-                    <a href="/login">Logout</a><br>
+                    <a href="/logout">Logout</a><br>
                     @else
-                    <a href="/logout">Login</a>
+                    <a href="/login">Login</a>
                     @endif
                 </p>
             </div>
