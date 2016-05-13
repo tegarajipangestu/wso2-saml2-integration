@@ -16,6 +16,13 @@ class Saml2LoginListener
     const CLAIM_USERNAME = "username";
     const CLAIM_EMAIL_ADDRESS = "email";
     const CLAIM_ROLE = "role";
+    const CLAIM_ORGANIZATION = "organization";
+    const CLAIM_ADDRESS = "address";
+    const CLAIM_LASTNAME = "lastname";
+    const CLAIM_IM = "im";
+    const CLAIM_URL = "url";
+    const CLAIM_COUNTRY = "country";
+    const CLAIM_MOBILE = "mobile";
     /**
      * Create the event listener.
      *
@@ -51,6 +58,13 @@ class Saml2LoginListener
         $profile = array(
           'saml_id' => $user->getUserId(),
           'email' => $this->getClaimOrDefault($attributes, self::CLAIM_EMAIL_ADDRESS),
+          'organization' => $this->getClaimOrDefault($attributes, self::CLAIM_ORGANIZATION),
+          'address' => $this->getClaimOrDefault($attributes, self::CLAIM_ADDRESS),
+          'lastname' => $this->getClaimOrDefault($attributes, self::CLAIM_LASTNAME),
+          'im' => $this->getClaimOrDefault($attributes, self::CLAIM_IM),
+          'url' => $this->getClaimOrDefault($attributes, self::CLAIM_URL),
+          'country' => $this->getClaimOrDefault($attributes, self::CLAIM_COUNTRY),
+          'mobile' => $this->getClaimOrDefault($attributes, self::CLAIM_MOBILE),
           // 'role' => $this->getClaimOrDefault($attributes, self::CLAIM_ROLE),
           'session_index' => $user->getSessionIndex(),
           'name' => $matches[1]

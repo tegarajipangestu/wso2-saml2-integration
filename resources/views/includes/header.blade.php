@@ -121,7 +121,7 @@
               <span class="thumb-sm avatar pull-left m-t-n-sm m-b-n-sm m-r-sm">
                 <img src="img/01.jpg" alt="...">                
               </span>
-              <span class="hidden-sm hidden-md m-r-xl">Ridwan Kamil</span> <i class="text14 icon-bdg_setting3 pull-right"></i>
+              <span class="hidden-sm hidden-md m-r-xl">{{$user->name}}</span> <i class="text14 icon-bdg_setting3 pull-right"></i>
             </a>
             <!-- dropdown -->
             <ul class="dropdown-menu animated fadeIn w-ml">             
@@ -132,7 +132,7 @@
                 </a>
               </li>
               <li>
-                <a href>Profile</a>
+                <a href="users/{{$user->email}}">Profile</a>
               </li>
               <li>
                 <a href>

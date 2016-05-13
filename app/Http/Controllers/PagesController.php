@@ -11,8 +11,9 @@ use Auth;
 class PagesController extends Controller
 {
     public function index(Request $request) {
-    	// return view('index');
-    	return redirect('/example');
+    	$user = Auth::user();
+    	return view('index',['user' => $user]);
+    	// return redirect('/example');
     }
 
     public function userManagement() {

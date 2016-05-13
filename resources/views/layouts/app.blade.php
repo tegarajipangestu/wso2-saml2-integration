@@ -9,7 +9,7 @@
       
       <!-- header -->
       <header id="header" class="app-header navbar" role="menu">
-        @include('includes.header')
+        @include('includes.header',['user' => $user])
       </header>
       <!-- / header -->
       <!-- aside -->

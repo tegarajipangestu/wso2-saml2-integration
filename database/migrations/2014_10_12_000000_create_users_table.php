@@ -18,7 +18,14 @@ class CreateUsersTable extends Migration
             $table->string('saml_id');
             $table->string('email')->unique();
             $table->string('remember_token');            
-            $table->string('session_index');            
+            $table->string('session_index');
+            $table->string('organization');
+            $table->string('address');
+            $table->string('lastname');
+            $table->string('im');
+            $table->string('url');
+            $table->string('country');            
+            $table->string('mobile');
             $table->timestamps();
         });
     }

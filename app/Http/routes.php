@@ -21,7 +21,9 @@
 */
 Route::group(['middleware' => ['web']], function () {
 	Route::get('/', 'PagesController@index');
-	Route::resource('users', 'UsersController');
+	Route::resource('users', 'UsersController', ['parameters' => [
+    'users' => 'email'
+    ]]);
 	Route::resource('roles', 'RolesController');
 	Route::get('generate-wsdl', 'GenerateWsdlController@index');
 	Route::get('/login', function() {
