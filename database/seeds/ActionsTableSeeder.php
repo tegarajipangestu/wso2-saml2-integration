@@ -11,25 +11,30 @@ class ActionsTableSeeder extends Seeder
      */
 
     public function run() {
-    	dd(Route::getRoutes()->getRoutes());
-    foreach (Route::getRoutes()->getRoutes() as $route)
-		{
-			$controllers = [];
-		    $action = $route->getAction();
+        $controller = [];
+        $controllers = [];
+        foreach (Route::getRoutes()->getRoutes() as $route) {
+                // dd($route->getAction());
+    		    $action = $route->getAction();
 
-		    if (array_key_exists('controller', $action))
-		    {
-		        // You can also use explode('@', $action['controller']); here
-		        // to separate the class name from the method
-		        $controllers[] = $action['controller'];
-		    }
-		    dd($controllers);
-		}
+    		    if (array_key_exists('controller', $action))
+    		    {
+    		        $matches[] = explode('@', $action['controller']);
+    		        // to separate the class name from the method
+                    // $controller[$matches[0][0]] = $matches[0][1];
+                    // array_push($controllers, $controller);
+    		    }
+    		    // dd($controllers);
+    		}
 
-    	DB:table('actions')->insert([
-    			'controller_name' => 'mamam',
-    			'method_name' => 'mamam'
-    		]);
+        foreach ($matches as $controllermethod) {
+            DB::table('actions')->insert([
+                'controller_name' => $controllermethod[0],
+                'method_name' => $controllermethod[1],
+                'updated_at' => Carbon\Carbon::now(),
+                'created_at' => Carbon\Carbon::now()
+                ]);
+        }
     	// factory(App\Action::class, 50)->create();
     }
 }
