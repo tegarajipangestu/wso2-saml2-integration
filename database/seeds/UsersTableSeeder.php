@@ -22,6 +22,6 @@ class UsersTableSeeder extends Seeder
     	// 		}
     	// 	}
     	// 	fclose($handle);
-        factory(App\User::class, 50)->create();
+        // factory(App\User::class, 50)->create();
     }
 }

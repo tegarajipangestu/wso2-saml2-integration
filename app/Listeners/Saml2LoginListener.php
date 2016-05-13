@@ -55,8 +55,9 @@ class Saml2LoginListener
           'session_index' => $user->getSessionIndex(),
           'name' => $matches[1]
         );
+        // dd($profile);
 
-        $laravelUser = User::updateOrCreate($profile);
+        $laravelUser = User::updateOrCreate(array('email' => $profile['email']), $profile);
         // dd($laravelUser);
         foreach ($roles as $role) {
           $createdRole = Role::firstOrNew(array('name' => $role));
