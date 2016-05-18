@@ -126,7 +126,7 @@
             <!-- dropdown -->
             <ul class="dropdown-menu animated fadeIn w-ml">             
               <li>
-                <a href>
+                <a href="/users/{}">
                   <span class="badge bg-danger pull-right">30%</span>
                   <span>Settings</span>
                 </a>

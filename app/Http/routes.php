@@ -19,7 +19,7 @@
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-Route::group(['middleware' => ['web']], function () {
+Route::group(['middleware' => ['web','auth']], function () {
 	Route::get('/', 'PagesController@index');
 	Route::resource('users', 'UsersController', ['parameters' => [
     'users' => 'email'
