@@ -128,7 +128,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="users/{{$user->name}}">Profile</a>
+                  <a href="/users/{{$user->name}}">Profile</a>
                 </li>
                 <li>
                   <a href>
