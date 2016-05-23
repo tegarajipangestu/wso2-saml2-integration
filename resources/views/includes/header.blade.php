@@ -128,7 +128,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href>Profile</a>
+                  <a href="users/{{$user->name}}">Profile</a>
                 </li>
                 <li>
                   <a href>
@@ -138,7 +138,7 @@
                 </li>
                 <li class="divider"></li>
                 <li>
-                  <a>Logout</a>
+                  <a href="/logout">Logout</a>
                 </li>
               </ul>
               <!-- / dropdown -->

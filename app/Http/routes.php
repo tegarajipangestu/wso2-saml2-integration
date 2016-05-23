@@ -21,39 +21,32 @@
 */
 Route::group(['middleware' => ['web','auth']], function () {
 	Route::get('/', 'PagesController@index');
+	Route::get('/logout', function() {
+		// return Auth::logout();
+		return Saml2::logout();
+	});
 	Route::resource('users', 'UsersController', ['parameters' => [
     'users' => 'email'
     ]]);
 	Route::resource('roles', 'RolesController');
 	Route::get('generate-wsdl', 'GenerateWsdlController@index');
-	Route::get('/login', function() {
-			return Saml2::login(URL::full());
-		});
-	Route::get('/logout', function() {
-		// return Auth::logout();
-		return Saml2::logout();
+});
+Route::get('/login', function() {
+		return Saml2::login(URL::full());
 	});
-	Route::group(['prefix' => 'example'], function() {
-		Route::get('/', function() {
-			if (Auth::check()) {
-				$user = Auth::user();			
-				$roles = $user->roles()->get();
-				return view('example',['user'=> $user, 'roles'=> $roles]);								
-			} 
-			else {
-				return view('example');								
-			}
-		});
-		Route::group(['prefix' => 'rumpun-jabatan'], function() {
-			Route::get('query-rumpun', 'ExampleRumpunJabatanController@queryRumpun');
-			Route::get('query-jabatan', 'ExampleRumpunJabatanController@queryJabatan');
-		});
-		Route::group(['prefix' => 'pegawai'], function() {
-			Route::get('query-pegawai', 'ExamplePegawaiController@queryPegawai');
-			Route::get('query-atasan', 'ExamplePegawaiController@queryAtasan');
-			Route::get('query-skpd', 'ExamplePegawaiController@querySKPD');
-			Route::get('query-pejabat-by-skpd', 'ExamplePegawaiController@queryPejabatBySKPD');
-		});
+Route::group(['prefix' => 'example'], function() {
+	Route::get('/', function() {
+			return view('example');
+	});
+	Route::group(['prefix' => 'rumpun-jabatan'], function() {
+		Route::get('query-rumpun', 'ExampleRumpunJabatanController@queryRumpun');
+		Route::get('query-jabatan', 'ExampleRumpunJabatanController@queryJabatan');
+	});
+	Route::group(['prefix' => 'pegawai'], function() {
+		Route::get('query-pegawai', 'ExamplePegawaiController@queryPegawai');
+		Route::get('query-atasan', 'ExamplePegawaiController@queryAtasan');
+		Route::get('query-skpd', 'ExamplePegawaiController@querySKPD');
+		Route::get('query-pejabat-by-skpd', 'ExamplePegawaiController@queryPejabatBySKPD');
 	});
 });
 /*
