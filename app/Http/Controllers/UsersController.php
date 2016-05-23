@@ -12,11 +12,11 @@ class UsersController extends Controller
 {
     public function index(Request $request) {
         $user = Auth::user();
-        return view ('users.index', ['user' => $user]);            
+        return view ('users.index', ['user' => $user]);
     }
 
     public function create() {
-        
+
     }
 
     public function show(Request $request, $name) {

@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="utf-8" />
+  <title>Bandung Web Kit | BDGWEBKIT</title>
+  <meta name="description" content="Bandung Web Kit" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="../libs_dashboard/assets/animate.css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="../libs_dashboard/assets/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="../libs_dashboard/assets/simple-line-icons/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="../libs_dashboard/jquery/bootstrap/dist/css/bootstrap.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/font.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  
+
+</head>
+<body>
+<div class="app app-header-fixed ">
+  
+
+    <!-- header -->
+  <header id="header" class="app-header navbar" role="menu">
+      <!-- navbar header -->
+      <div class="navbar-header bg-info">
+        <button class="pull-right visible-xs dk" ui-toggle-class="show" target=".navbar-collapse">
+          <i class="glyphicon glyphicon-cog"></i>
+        </button>
+        <button class="pull-right visible-xs" ui-toggle-class="off-screen" target=".app-aside" ui-scroll="app">
+          <i class="glyphicon glyphicon-align-justify"></i>
+        </button>
+        <!-- brand -->
+        <a href="#/" class="navbar-brand text-lt">          
+          <img src="img/logo-small.png" alt="." class="small-logo hide">
+          <img src="img/logo.png" alt="." class="large-logo">
+        </a>
+        <!-- / brand -->
+      </div>
+      <!-- / navbar header -->
+
+      <!-- navbar collapse -->
+      <div class="collapse pos-rlt navbar-collapse bg-info">
+        <!-- buttons -->
+        <div class="nav navbar-nav hidden-xs">
+                  
+        </div>
+        <!-- / buttons -->
+
+        <!-- link and dropdown -->
+        <ul class="nav navbar-nav hidden-sm">
+          <li>
+            <a href="#">HOME</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              <i class="fa fa-fw fa-plus visible-xs-inline-block"></i>
+              <span>PAGES</span> <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              
+              <li>
+                <a href="#">
+                  <span class="badge bg-danger pull-right">5</span>
+                  <span>Form Elements</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span class="badge bg-info pull-right">15</span>
+                  <span>Form Validation</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span>Form Wizard</span>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+           <li>
+            <a href="#">PROJECT</a>
+          </li>
+        </ul>
+        <!-- / link and dropdown -->
+
+        <!-- nabar right -->
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              <i class="icon-bdg_alert text14"></i>
+              <span class="visible-xs-inline">Notifikasi</span>
+              <span class="badge badge-sm up bg-danger pull-right-xs">2</span>
+            </a>
+            <!-- dropdown -->
+            <div class="dropdown-menu w-xl animated fadeIn">
+              <div class="panel bg-white">
+                <div class="panel-heading b-light bg-light">
+                  <strong>Kamu Punya <span>2</span> Notifikasi</strong>
+                </div>
+                <div class="list-group">
+                  <a href class="list-group-item">
+                    <span class="pull-left m-r thumb-sm">
+                      <img src="img/01.jpg" alt="..." class="img-circle">
+                    </span>
+                    <span class="clear block m-b-none">
+                      Pembangunan Taman daerah Bandung Barat<br>
+                      <small class="text-muted">10 minutes ago</small>
+                    </span>
+                  </a>
+                  <a href class="list-group-item">
+                    <span class="clear block m-b-none">
+                      Revitalisasi Sungai Cikapundung<br>
+                      <small class="text-muted">1 hour ago</small>
+                    </span>
+                  </a>
+                </div>
+                <div class="panel-footer text-sm">
+                  <a href class="pull-right"><i class="icon-bdg_setting3"></i></a>
+                  <a href="#notes" data-toggle="class:show animated fadeInRight">Lihat Semua Notifikasi</a>
+                </div>
+              </div>
+            </div>
+            <!-- / dropdown -->
+          </li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              <i class="icon-bdg_search text14"></i>              
+            </a>
+            <!-- dropdown -->
+             <div class="search_wrapper pull-right w-xl animated fadeIn">
+              <form action="">
+                <i class="pull-left glyphicon glyphicon-search"></i>
+                  <input type="text" class="pull-left" placeholder="Type Here">
+                <a href="#" class="remove-search"><i class="pull-right icon-bdg_cross"></i></a>
+              </form>
+            </div>
+            <!-- / dropdown -->
+          </li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="bg-blue profile-header dropdown-toggle clear" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-left m-t-n-sm m-b-n-sm m-r-sm">
+                <img src="img/01.jpg" alt="...">                
+              </span>
+              <span class="hidden-sm hidden-md m-r-xl">Ridwan Kamil</span> <i class="text14 icon-bdg_setting3 pull-right"></i>
+            </a>
+            <!-- dropdown -->
+            <ul class="dropdown-menu animated fadeIn w-ml">             
+              <li>
+                <a href>
+                  <span class="badge bg-danger pull-right">30%</span>
+                  <span>Settings</span>
+                </a>
+              </li>
+              <li>
+                <a href>Profile</a>
+              </li>
+              <li>
+                <a href>
+                  <span class="label bg-info pull-right">new</span>
+                  Help
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a>Logout</a>
+              </li>
+            </ul>
+            <!-- / dropdown -->
+          </li>
+        </ul>
+        <!-- / navbar right -->
+      </div>
+      <!-- / navbar collapse -->
+  </header>
+  <!-- / header -->
+
+
+    <!-- aside -->
+  <aside id="aside" class="app-aside hidden-xs bg-dark">
+      <div class="aside-wrap">
+        <div class="navi-wrap">
+          <!-- user -->
+          <div class="clearfix hidden-xs text-center hide" id="aside-user">
+            <div class="dropdown wrapper">
+              <a href="app.page.profile">
+                <span class="thumb-lg w-auto-folded avatar m-t-sm">
+                  <img src="img/01.jpg" class="img-full" alt="...">
+                </span>
+              </a>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
+                <span class="clear">
+                  <span class="block m-t-sm">
+                    <strong class="font-bold text-lt">John.Smith</strong> 
+                    <b class="caret"></b>
+                  </span>
+                  <span class="text-muted text-xs block">Art Director</span>
+                </span>
+              </a>
+              <!-- dropdown -->
+              <ul class="dropdown-menu animated fadeInRight w hidden-folded">
+                <li class="wrapper b-b m-b-sm bg-info m-t-n-xs">
+                  <span class="arrow top hidden-folded arrow-info"></span>
+                  <div>
+                    <p>300mb of 500mb used</p>
+                  </div>
+                  <div class="progress progress-xs m-b-none dker">
+                    <div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="50%" style="width: 50%"></div>
+                  </div>
+                </li>
+                <li>
+                  <a href>Settings</a>
+                </li>
+                <li>
+                  <a href="page_profile.html">Profile</a>
+                </li>
+                <li>
+                  <a href>
+                    <span class="badge bg-danger pull-right">3</span>
+                    Notifications
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="page_signin.html">Logout</a>
+                </li>
+              </ul>
+              <!-- / dropdown -->
+            </div>
+            <div class="line dk hidden-folded"></div>
+          </div>
+          <!-- / user -->
+
+         <!-- nav -->
+          <nav ui-nav class="navi clearfix">
+            <ul class="nav">
+              <li class="hidden-folded m-t text-dark-grey text-xs padder-md padder-v-sm">
+                <span>Navigation</span>
+              </li>
+              <li>
+                <a href="index.html" class="text-dark-grey" >      
+                  <i class="icon-bdg_dashboard icon-grey"></i>
+                  <span class="font-bold">Dashboard</span>
+                </a>               
+              </li>
+              
+              <li class="line1 dg"></li>
+
+              <li class="hidden-folded text-dark-grey text-xs padder-md padder-v-sm">
+                <span>Components</span>
+              </li>
+              
+              <li class="active">
+                <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="text8 icon-bdg_arrow3 text"></i>
+                    <i class="text8 icon-bdg_arrow1 text-active"></i>
+                  </span>
+                  <i class="icon-bdg_uikit"></i>
+                  <span class="font-bold">UI Kits</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a href>
+                      <span>UI Kits</span>
+                    </a>
+                  </li>
+                  <li class="active">
+                    <a href="ui_button.html">
+                      <span>Buttons</span>
+                    </a>
+                  </li>
+                  <li >
+                    <a href="ui_icons.html">
+                      <b class="badge bg-danger pull-right">3</b>
+                      <span>Icons</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui_grid.html">
+                      <span>Grid</span>
+                    </a>
+                  </li>
+                  
+                 
+                </ul>
+              </li>
+              <li>
+                <a href="table_static.html" class="auto">
+                  
+                  <b class="badge bg-info pull-right">2</b>
+                  <i class="icon-bdg_table"></i>
+                  <span class="font-bold">Table</span>
+                </a>
+               
+              </li>
+              <li>
+                  <a href="form_element.html" class="auto">                  
+                  <i class="icon-bdg_form"></i>
+                  <span class="font-bold">Form</span>
+                </a>                
+              </li>
+              <li>
+                <a href="ui_chart.html">
+                  <i class="icon-bdg_chart2"></i>
+                  <span class="font-bold">Chart</span>
+                </a>
+              </li>
+              <li>
+                <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="text8 icon-bdg_arrow3 text"></i>
+                    <i class="text8 icon-bdg_arrow1 text-active"></i>
+                  </span>
+                  <i class="icon-bdg_layout"></i>
+                  <span class="font-bold">Pages</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a href>
+                      <span>Pages</span>
+                    </a>
+                  </li>
+    
+                 
+                  <li>
+                    <a href="lockscreen.html">
+                      <span>Lock screen</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="signin.html">
+                      <span>Signin</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="register.html">
+                      <span>Signup</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="forgot_password.html">
+                      <span>Forgot password</span>
+                    </a>
+                  </li>
+                 
+                </ul>
+              </li>
+             
+              
+            </ul>
+          </nav>
+          <!-- nav -->
+
+
+
+        </div>
+      </div>
+  </aside>
+  <!-- / aside -->
+
+<!-- content -->
+<div id="content" class="app-content" role="main">
+
+  <div class="hbox hbox-auto-xs hbox-auto-sm ng-scope">
+      <div class="col">
+
+      
+
+          <div class="bg-light lter">    
+              <ul class="breadcrumb bg-grey-breadcrumb m-b-none">
+                <li><a href="#" class="btn no-shadow" ui-toggle-class="app-aside-folded" target=".app">
+                   <i class="icon-bdg_expand1 text"></i>
+                  <i class="icon-bdg_expand2 text-active"></i>
+                </a>   </li>
+                <li><a href>Home</a></li>
+                <li><i class="fa fa-angle-right"></i><a href>UI Kits</a></li>
+                <li class="active"><i class="fa fa-angle-right"></i>Buttons</li>
+              </ul>
+          </div>
+          
+          <div class="bg-light lter b-b wrapper-md padder-md">
+            <h1 class="m-n font-bold h4 padder">Buttons</h1>
+          </div>
+
+      
+
+
+
+    
+    <div class="wrapper-lg bg-light">
+      <div class="row">
+        <div class="col-md-12 m-l-sm  ">
+          <h4 class="m-t-xs font-bold text12">Button options</h4>
+          <div>
+            
+            <button class="btn m-b-sm m-r-sm btn-default">Button Default</button>
+           
+
+            <button class="btn m-b-sm m-r-sm btn-info">Button</button>
+            <button class="btn m-b-sm m-r-sm btn-success">Success</button>            
+            <button class="btn m-b-sm m-r-sm btn-warning">Warning</button>
+            <button class="btn m-b-sm m-r-sm btn-danger">Danger</button>
+            <button class="btn m-b-sm m-r-sm btn-dark">Dark</button>
+            <button class="btn m-b-sm m-r-sm btn-cancel">Cancel</button>
+          </div>
+
+          <div>
+            <button class="btn m-b-sm m-r-sm btn-default btn-sm">Default</button>
+            <button class="btn m-b-sm m-r-sm btn-info btn-sm">Button</button>
+            <button class="btn m-b-sm m-r-sm btn-success btn-sm">Success</button>            
+            <button class="btn m-b-sm m-r-sm btn-warning btn-sm">Warning</button>
+            <button class="btn m-b-sm m-r-sm btn-danger btn-sm">Danger</button>
+            <button class="btn m-b-sm m-r-sm btn-dark btn-sm">Dark</button>
+            <button class="btn m-b-sm m-r-sm btn-cancel btn-sm">Cancel</button>
+          </div>
+
+          <h4 class="m-t-lg font-bold text12">
+            Button addon
+          </h4>
+          <p>            
+            <button class="btn m-b-sm m-r-sm btn-default btn-addon"><i class="fa fa-music"></i>Default</button>
+            <button class="btn m-b-sm m-r-sm btn-info btn-addon"><i class="fa fa-trash-o"></i>Button</button>
+            <button class="btn m-b-sm m-r-sm btn-success btn-addon"><i class="fa fa-minus pull-right"></i>Button</button>
+            <button class="btn m-b-sm m-r-sm btn-warning btn-addon"><i class="fa fa-bitbucket"></i>Button</button>
+            <button class="btn m-b-sm m-r-sm btn-danger btn-addon"><i class="fa fa-rocket"></i>Button</button>
+            <button class="btn m-b-sm m-r-sm btn-dark btn-addon"><i class="fa fa-plus"></i>Button</button>
+            <button class="btn m-b-sm m-r-sm btn-cancel btn-addon"><i class="fa fa-paw"></i>Button</button>
+                    
+          </p>
+
+          <p>            
+            <button class="btn m-b-sm m-r-sm btn-default btn-addon btn-sm"><i class="fa fa-music"></i>Default</button>
+            <button class="btn m-b-sm m-r-sm btn-info btn-addon btn-sm"><i class="fa fa-trash-o"></i>Button</button>
+            <button class="btn m-b-sm m-r-sm btn-success btn-addon btn-sm"><i class="fa fa-minus pull-right"></i>Button</button>
+            <button class="btn m-b-sm m-r-sm btn-warning btn-addon btn-sm"><i class="fa fa-bitbucket"></i>Button</button>
+            <button class="btn m-b-sm m-r-sm btn-danger btn-addon btn-sm"><i class="fa fa-rocket"></i>Button</button>
+            <button class="btn m-b-sm m-r-sm btn-dark btn-addon btn-sm"><i class="fa fa-plus"></i>Button</button>
+            <button class="btn m-b-sm m-r-sm btn-cancel btn-addon btn-sm"><i class="fa fa-paw"></i>Button</button>
+                    
+          </p>
+         
+         <h4 class="m-t-lg font-bold text12">Button dropdowns</h4>          
+          <div class="m-b-sm">
+            <div class="btn-group dropdown">
+              <button class="btn m-b-sm m-r-sm btn-default btn-addon" data-toggle="dropdown">Filter Range <i class="pull-right fa fa-sort-desc"></i></button>
+              <ul class="dropdown-menu">
+                <li><a href>Action</a></li>
+                <li><a href>Another action</a></li>
+                <li><a href>Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href>Separated link</a></li>
+              </ul>
+            </div>
+            <div class="btn-group dropdown">
+               <button class="btn m-b-sm m-r-sm btn-success btn-addon" data-toggle="dropdown">Filter Range <i class="pull-right fa fa-sort-desc"></i></button>
+              <ul class="dropdown-menu">
+                <li><a href>Action</a></li>
+                <li><a href>Another action</a></li>
+                <li><a href>Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href>Separated link</a></li>
+              </ul>
+            </div>
+
+            <div class="btn-group dropdown">
+              <button class="btn m-b-sm m-r-sm btn-info btn-addon btn-sm" data-toggle="dropdown">Filter Range <i class="pull-right fa fa-sort-desc"></i></button>
+              <ul class="dropdown-menu">
+                <li><a href>Action</a></li>
+                <li><a href>Another action</a></li>
+                <li><a href>Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href>Separated link</a></li>
+              </ul>
+            </div>
+            <div class="btn-group dropdown">
+               <button class="btn m-b-sm m-r-sm btn-danger btn-addon btn-sm" data-toggle="dropdown">Filter Range <i class="pull-right fa fa-sort-desc"></i></button>
+              <ul class="dropdown-menu">
+                <li><a href>Action</a></li>
+                <li><a href>Another action</a></li>
+                <li><a href>Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href>Separated link</a></li>
+              </ul>
+            </div>
+          </div>          
+          <p class="text-muted">Dropdown Button Only </p>
+          <div class="m-b-sm">
+            <div class="btn-group dropdown">             
+              <button class="btn m-b-sm m-r-sm btn-default" data-toggle="dropdown"><span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href>Action</a></li>
+                <li><a href>Another action</a></li>
+                <li><a href>Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href>Separated link</a></li>
+              </ul>
+            </div>
+            <div class="btn-group dropdown dropup">              
+              <button class="btn m-b-sm m-r-sm btn-default" data-toggle="dropdown"><span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href>Action</a></li>
+                <li><a href>Another action</a></li>
+                <li><a href>Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href>Separated link</a></li>
+              </ul>
+            </div>
+
+            <div class="btn-group dropdown">             
+              <button class="btn m-b-sm m-r-sm btn-default btn-sm" data-toggle="dropdown"><span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href>Action</a></li>
+                <li><a href>Another action</a></li>
+                <li><a href>Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href>Separated link</a></li>
+              </ul>
+            </div>
+            <div class="btn-group dropdown dropup">              
+              <button class="btn m-b-sm m-r-sm btn-default btn-sm" data-toggle="dropdown"><span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href>Action</a></li>
+                <li><a href>Another action</a></li>
+                <li><a href>Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href>Separated link</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <h4 class="m-t-lg font-bold text12">Button with icon</h4>
+          <p>
+            <button class="btn m-b-sm m-r-sm btn-success"><i class="m-r-xs fa fa-plus"></i> Add Row</button>
+            <button class="btn m-b-sm m-r-sm btn-success btn-sm"><i class="m-r-xs fa fa-plus"></i> Add Row</button>
+            <button class="btn m-b-sm m-r-sm btn-icon btn-info"><i class="fa fa-twitter text16"></i></button>
+            <button class="btn m-b-sm m-r-sm btn-sm btn-icon btn-dark"><i class="fa fa-random"></i></button>
+          </p>            
+          <p>
+            <button class="btn btn-default btn-lg btn-block btn-addon"><i class="fa fa-bars pull-right"></i> Block button with icon</button>
+          </p>
+          <p>
+            <button class="btn btn-default btn-lg btn-block btn-addon"><i class="fa fa-bars pull-left"></i> Block button with icon</button>
+          </p>    
+
+          <h4 class="m-t-lg font-bold text12">Button groups</h4>
+            <div class="m-b-sm">
+              <div class="btn-group btn-group-nav">
+                <button type="button" class="btn btn-default font-regular active">Left</button>
+                <button type="button" class="btn btn-default font-regular">Middle</button>
+                <button type="button" class="btn btn-default font-regular">Right</button>
+              </div>              
+            </div>
+
+          <h4 class="m-t-lg font-bold text12">Vertical button groups</h4>           
+            <div class="btn-group-vertical m-b-sm w-lg">
+              <button type="button" class="btn btn-default font-regular">Top</button>
+              <button type="button" class="btn btn-default font-regular active">Middle</button>
+              <button type="button" class="btn btn-default font-regular">Bottom</button>
+            </div>
+          
+          <h4 class="m-t-lg font-bold text12">Button groups icon and small size</h4>
+              <div class="btn-group btn-group-nav m-b-sm m-r-sm">
+                <button type="button" class="btn btn-default font-regular active btn-sm"><i class="fa fa-angle-left text16"></i></button>
+                <button type="button" class="btn btn-default font-regular btn-sm"><i class="fa fa-angle-right text16"></i></button>
+              </div>    
+              <div class="btn-group btn-group-nav m-b-sm m-r-sm">
+                <button type="button" class="btn btn-default font-regular active btn-sm">Day</button>
+                <button type="button" class="btn btn-default font-regular btn-sm">Week</button>
+                <button type="button" class="btn btn-default font-regular btn-sm">Year</button>
+              </div>    
+          
+           <h4 class="m-t-lg font-bold text12">Navigation</h4>
+              <div class="btn-group btn-group-nav m-b-sm m-r-sm">
+                <button type="button" class="btn btn-default font-regular btn-sm active"><i class="fa fa-angle-double-left text16"></i></button>
+                <button type="button" class="btn btn-default font-regular btn-sm active"><i class="fa fa-angle-left text16"></i></button>
+              </div> 
+               <div class="btn-group btn-group-nav m-b-sm m-r-sm  full-radius">
+                <button type="button" class="btn btn-default font-regular active btn-sm m-r-sm active">0</button> <span class="m-t-xs pull-left">of 50</span>
+               </div>
+              <div class="btn-group btn-group-nav m-b-sm m-r-sm">
+                <button type="button" class="btn btn-default font-regular btn-sm active"><i class="fa fa-angle-right text16"></i></button>
+                <button type="button" class="btn btn-default font-regular btn-sm active"><i class="fa fa-angle-double-right text16"></i></button>
+              </div> 
+
+              <h4 class="m-t-lg font-bold text12">Nested button groups</h4>                       
+               
+              <div class="btn-group btn-group-nav">
+                <button type="button" class="btn btn-default font-regular btn-sm active"><i class="fa fa-angle-left text16"></i></button>
+                 <button type="button" class="btn btn-default font-regular btn-sm active">1</button>
+                 <button type="button" class="btn btn-default font-regular btn-sm active">2</button>
+                 <button type="button" class="btn btn-default font-regular btn-sm active">3</button>
+                 <button type="button" class="btn btn-default font-regular btn-sm active">4</button>
+
+                <button type="button" class="btn btn-default font-regular btn-sm active"><i class="fa fa-angle-right text16"></i></button>
+                
+              </div>  
+
+              <h4 class="m-t-lg">Lable &amp; Badge</h4>
+                <p>                  
+                  <span class="label btn-success">Success</span>
+                  <span class="label btn-info">Info</span>
+                  <span class="label btn-dark">dark</span>
+                  <span class="label btn-warning">Warning</span>
+                  <span class="label btn-danger">Danger</span>
+                  <span class="label btn-cancel">Light</span>
+                </p>
+                <p class="m-b-none">          
+                  <span class="badge btn-primary">15</span>
+                  <span class="badge btn-success">20</span>
+                  <span class="badge btn-info">21</span>
+                  <span class="badge btn-dark">13</span>
+                  <span class="badge btn-warning">35</span>
+                  <span class="badge btn-danger">32</span>
+                  <span class="badge btn-cancel">9</span>
+                </p>
+              
+        </div>
+        
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 padder-v">
+          
+        </div>
+        <div class="col-md-12 padder-v">
+          
+        </div>
+      </div>
+    </div>
+
+    </div>
+    <!-- / col -->
+
+    <div class="col w-ml bg-white-only bg-auto no-border-xs">
+    <div class="nav-tabs-alt" >
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+          <a data-target="#tab-1" role="tab" data-toggle="tab">
+            <i class="icon-bdg_people text-md text-muted wrapper-xs"></i>People
+          </a>
+        </li>
+        <li>
+          <a data-target="#tab-2" role="tab" data-toggle="tab">
+            <i class="icon-bdg_chat text-md text-muted wrapper-xs"></i>Chat
+          </a>
+        </li>
+        <li>
+          <a data-target="#tab-3" role="tab" data-toggle="tab">
+            <i class="icon-bdg_invoice text-md text-muted wrapper-xs"></i>Invoice
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="tab-1">
+        <div class="wrapper-none">         
+          <ul class="list-group no-bg no-borders">
+            <li class="list-group-item b-b padder-v">
+              <a herf class="pull-left thumb-sm avatar m-r">
+                <img src="img/02.jpg" alt="..." class="img-circle">
+                <i class="on b-white bottom"></i>
+              </a>
+              <div class="clear">
+                <div><a href>Mochamad Ridwan Kamil S.T., MUD.</a></div>
+                <small class="text-muted">Walikota Bandung</small>
+              </div>
+            </li>
+            <li class="list-group-item b-b padder-v">
+              <a herf class="pull-left thumb-sm avatar m-r">
+                <img src="img/06.jpg" alt="..." class="img-circle">
+                <i class="on b-white bottom"></i>
+              </a>
+              <div class="clear">
+                <div><a href>H.Dada Rosada S.H., M.Si.</a></div>
+                <small class="text-muted">Walikota Bandung</small>
+              </div>
+            </li>
+            <li class="list-group-item b-b padder-v">
+              <a herf class="pull-left thumb-sm avatar m-r">
+                <img src="img/05.jpg" alt="..." class="img-circle">
+                <i class="busy b-white bottom"></i>
+              </a>
+              <div class="clear">
+                <div><a href>H.AA Tarmana</a></div>
+                <small class="text-muted">Walikota Bandung</small>
+              </div>
+            </li>
+            <li class="list-group-item b-b padder-v">
+              <a herf class="pull-left thumb-sm avatar m-r">
+                <img src="img/04.jpg" alt="..." class="img-circle">
+                <i class="away b-white bottom"></i>
+              </a>
+              <div class="clear">
+                <div><a href>Wahyu Hamidjaja</a></div>
+                <small class="text-muted">Walikota Bandung</small>
+              </div>
+            </li>
+            <li class="list-group-item b-b padder-v">
+              <a herf class="pull-left thumb-sm avatar m-r">
+                <img src="img/03.jpg" alt="..." class="img-circle">
+                <i class="away b-white bottom"></i>
+              </a>
+              <div class="clear">
+                <div><a href>H. Ateng Wahyudi</a></div>
+                <small class="text-muted">Walikota Bandung</small>
+              </div>
+            </li>
+          </ul>          
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane tab-2" id="tab-2">
+        <div class="wrapper-none">
+          
+          <ul class="list-group no-bg no-border auto">
+            <li class="list-group-item b-b padder-v">
+              <span class="pull-left thumb-sm m-r"><img src="img/03.jpg" alt="..." class="img-circle"></span>
+              <a href="#" class="text-muted" ui-toggle-class="show" target=".app-aside-right"><i class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
+              <div class="clear">
+                <div><a href>H. Ateng Wahyudi</a></div>
+                <small class="text-muted">Walikota Bandung</small>
+              </div>
+            </li>
+            <li class="list-group-item b-b padder-v">
+              <span class="pull-left thumb-sm m-r"><img src="img/04.jpg" alt="..." class="img-circle"></span>
+              <a href="#" class="text-muted" ui-toggle-class="show" target=".app-aside-right"><i class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
+              <div class="clear">
+                <div><a href>Wahyu Hamidjaja</a></div>
+                <small class="text-muted">Walikota Bandung</small>
+              </div>
+            </li>
+            <li class="list-group-item b-b padder-v">
+              <span class="pull-left thumb-sm m-r"><img src="img/05.jpg" alt="..." class="img-circle"></span>
+              <a href class="text-muted" ui-toggle-class="show" target=".app-aside-right"><i class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
+              <div class="clear">
+                <div><a href>H.AA Tarmana</a></div>
+                <small class="text-muted">Walikota Bandung</small>
+              </div>
+            </li>
+            <li class="list-group-item b-b padder-v">
+              <span class="pull-left thumb-sm m-r"><img src="img/01.jpg" alt="..." class="img-circle"></span>
+              <a href class="text-muted" ui-toggle-class="show" target=".app-aside-right"><i class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
+              <div class="clear">
+                <div><a href>Mochamad Ridwan Kamil S.T., MUD.</a></div>
+                <small class="text-muted">Walikota Bandung</small>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane tab-3" id="tab-3">
+        <div class="wrapper-none">          
+          <ul class="list-group no-bg no-border auto">
+            <li class="list-group-item">
+              <span class="text-grey l-h-s">Dana CSR utk Kota Bandung 3:00 pm</span>
+              <span class="block text12 text-info font-bold">Rp. 15.000.000,00</span>
+            </li>
+            <li class="list-group-item">
+              <span class="text-grey l-h-s">Dana CSR utk Kota Bandung 3:00 pm</span>
+              <span class="block text12 text-success font-bold">Rp. 120.451.000,00</span>
+            </li>
+            <li class="list-group-item">
+             <span class="text-grey l-h-s">Dana CSR utk Kota Bandung 3:00 pm</span>
+              <span class="block text12 text-warning font-bold">Rp. 500.000,00</span>
+            </li>
+            <li class="list-group-item">
+              <span class="text-grey l-h-s">Dana CSR utk Kota Bandung 3:00 pm</span>
+              <span class="block text12 text-danger font-bold"> - Rp. 15.000.000,00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="padder-md">      
+      <!-- streamline -->
+      <div class="m-b text-middle text14 font-semibold">Aktifitas Terbaru</div>
+      <div class="streamline b-l m-b b-grey">
+        <div class="sl-item b-grey">
+          <div class="m-l">
+            <div class="text-muted">5 menit yang lalu</div>
+            <p class="text-grey"><a href class="text-info">Wa Dedy</a> mengomentari tautan anda.</p>
+          </div>
+        </div>
+        <div class="sl-item b-grey">
+          <div class="m-l">
+            <div class="text-muted">11:30</div>
+            <p class="text-grey">Meeting Internal Dishub</p>
+          </div>
+        </div>
+        <div class="sl-item b-success b-l">
+          <div class="m-l">
+            <div class="text-muted">10:30</div>
+            <p class="text-grey">Membalas email dari <a href class="text-info">Rian</a>.</p>
+          </div>
+        </div>       
+        <div class="sl-item b-primary b-l">
+          <div class="m-l">
+            <div class="text-muted">Wed, 25 Mar</div>
+            <p class="text-grey"> <a href class="text-info">Syarip</a> Menyelesaikan PSD Mobile Kit.</p>
+          </div>
+        </div>
+        <div class="sl-item b-warning b-l">
+          <div class="m-l">
+            <div class="text-muted">Thu, 10 Mar</div>
+            <p class="text-grey"><a href class="text-info">Fajar</a> memberikan masukan Crossbrowser Testing</p>
+          </div>
+        </div>
+        <div class="sl-item b-info b-l">
+          <div class="m-l">
+            <div class="text-muted">Sat, 5 Mar</div>
+            <p class="text-grey">Persiapan Presentasi</p>
+          </div>
+        </div>
+        <div class="sl-item b-grey b-l">
+          <div class="m-l">
+            <div class="text-muted">Sun, 11 Feb</div>
+            <p class="text-grey"><a href class="text-info">Syarip</a> menyelesaikan Task <a href class="text-info">Mockup Design</a>.</p>
+          </div>
+        </div>
+        <div class="sl-item b-grey b-l">
+          <div class="m-l">
+            <div class="text-muted">Thu, 17 Jan</div>
+            <p class="text-grey">Follow up report HTML</p>
+          </div>
+        </div>
+      </div>
+      <!-- / streamline -->
+    </div>  
+  </div>
+
+
+  </div>
+    <!-- end hbox hbox-auto-xs -->
+</div>
+
+
+ <!-- footer -->
+  <footer id="footer" class="app-footer" role="footer">
+    <div class="wrapper-md padder-lg b-t bg-light">
+      <span class="pull-right">&copy; Copyright Bandung <a href ui-scroll="app" class="m-l-sm text-muted"><i class="icon-bdg_arrow11"></i></a></span>
+     Made with <i class="text-danger fa fa-heart"></i> in Bandung
+    </div>
+  </footer>
+  <!-- / footer -->
+
+
+
+</div>
+
+<script src="../libs_dashboard/jquery/jquery/dist/jquery.js"></script>
+<script src="../libs_dashboard/jquery/bootstrap/dist/js/bootstrap.js"></script>
+<script src="js/ui-load.js"></script>
+<script src="js/ui-jp.config.js"></script>
+<script src="js/ui-jp.js"></script>
+<script src="js/ui-nav.js"></script>
+<script src="js/ui-toggle.js"></script>
+<script src="js/ui-client.js"></script>
+
+</body>
+</html>
