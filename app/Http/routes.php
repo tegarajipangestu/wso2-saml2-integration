@@ -26,11 +26,12 @@ Route::group(['middleware' => ['web','auth']], function () {
 		return Saml2::logout();
 	});
 	Route::resource('users', 'UsersController', ['parameters' => [
-    'users' => 'email'
+    'users' => 'username'
     ]]);
 	Route::resource('roles', 'RolesController');
-	Route::get('generate-wsdl', 'GenerateWsdlController@index');
+	Route::resource('post', 'PostsController');
 });
+Route::get('generate-wsdl', 'GenerateWsdlController@index');
 Route::get('/login', function() {
 		return Saml2::login(URL::full());
 	});

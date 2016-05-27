@@ -6,6 +6,8 @@ use Closure;
 use Illuminate\Support\Facades\Auth;
 use Saml2;
 use URL;
+use App\Action;
+use DB;
 
 class Authenticate
 {
@@ -27,6 +29,20 @@ class Authenticate
                 // return Saml2::login(URL::full());
             }
         }
-        return $next($request);
+        else {
+          $user = Auth::user();
+          $action = Action::where('method_type','=',$request->method())->where('uri','=',$request->route()->uri())->first();
+          $authorize = DB::table('user_roles')->where('user_roles.user_id','=',$user->id)
+          ->join('roles', 'roles.id','=','user_roles.role_id')
+          ->join('action_roles', 'roles.id','=', 'action_roles.role_id')
+          ->where('action_roles.action_id','=',$action->id)
+          ->get();
+          if ($authorize) {
+            return $next($request);
+          }
+          else {
+            return response('Unauthorized.', 401);
+          }
+        }
     }
 }

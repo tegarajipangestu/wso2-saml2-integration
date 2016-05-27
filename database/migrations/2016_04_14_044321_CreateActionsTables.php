@@ -16,6 +16,9 @@ class CreateActionsTables extends Migration
             $table->increments('id');
             $table->string('controller_name');
             $table->string('method_name');
+            $table->string('uri');
+            $table->string('method_type');
+            $table->string('uri_regex');            
             $table->timestamps();
         });
     }
