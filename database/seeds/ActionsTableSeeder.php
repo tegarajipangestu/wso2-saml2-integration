@@ -17,15 +17,17 @@ class ActionsTableSeeder extends Seeder
             $methods = $route->methods();
             $uri = $route->uri();
             $uri_regex = preg_replace('/(?:\/(?:{\w+}))/', '/(.*?)', $uri);
-            // dd($uri);
     		    if (array_key_exists('controller', $action))
     		    {
                 $match = explode('@', $action['controller']);
-                $match[2] = $route->uri();
-                $match[3] = $methods[0];
-                $match[4] = $uri_regex;
-    		        $matches[] = $match;
     		    }
+            else {
+              $match = ["No Controller", "No Method"];
+            }
+            $match[2] = $route->uri();
+            $match[3] = $methods[0];
+            $match[4] = $uri_regex;
+            $matches[] = $match;
     		}
         foreach ($matches as $controllermethod) {
             DB::table('actions')->insert([
