@@ -35,7 +35,6 @@ class EventServiceProvider extends ServiceProvider
     {
         parent::boot($events);
         $events->listen('*', function () {
-            Debugbar::info(Event::firing());
         });
     }
 }
