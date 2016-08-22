@@ -1,8 +1,9 @@
 <?php
 
 //This is variable is an example - Just make sure that the urls in the 'idp' config are ok.
-// $idp_host = 'https://172.17.0.42/samlsso';
-$idp_host = 'https://dev.divusi.com/samlsso';
+// $idp_host = 'https://auth.bandung.go.id/samlsso';
+$idp_host = 'https://localhost:9444/samlsso';
+
 
 return $settings = array(
     /*****
@@ -11,13 +12,19 @@ return $settings = array(
     'useRoutes' => true, //include library routes and controllers
 
 
-    'routesPrefix' => '',
+    'routesPrefix' => '/saml2',
 
     /**
      * which middleware group to use for the saml routes
      * Laravel 5.2 will need a group which includes StartSession
      */
-    'routesMiddleware' => [],
+    'routesMiddleware' => ['web'],
+
+    /**
+     * Indicates how the parameters will be
+     * retrieved from the sls request for signature validation
+     */
+    'retrieveParametersFromServer' => false,
 
     /**
      * Where to redirect after logout
@@ -27,13 +34,13 @@ return $settings = array(
     /**
      * Where to redirect after login if no other option was provided
      */
-    'loginRoute' => '/example',
+    'loginRoute' => '/',
 
 
     /**
      * Where to redirect after login if no other option was provided
      */
-    'errorRoute' => '/error',
+    'errorRoute' => '/',
 
 
 
@@ -51,7 +58,7 @@ return $settings = array(
     'strict' => true, //@todo: make this depend on laravel config
 
     // Enable debug mode (to print errors)
-    'debug' => false, //@todo: make this depend on laravel config
+    'debug' => true, //@todo: make this depend on laravel config
 
     // Service Provider Data that we are deploying
     'sp' => array(
@@ -59,7 +66,7 @@ return $settings = array(
         // Specifies constraints on the name identifier to be used to
         // represent the requested subject.
         // Take a look on lib/Saml2/Constants.php to see the NameIdFormat supported
-        'NameIDFormat' => 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress',
+        'NameIDFormat' => 'urn:oasis:names:tc:SAML:2.0:nameid-format:entity',
 
         // Usually x509cert and privateKey of the SP are provided by files placed at
         // the certs folder. But we can also provide them with the following parameters
@@ -68,12 +75,12 @@ return $settings = array(
 
         //LARAVEL - You don't need to change anything else on the sp
         // Identifier of the SP entity  (must be a URI)
-        'entityId' => 'http://localhost:8000/metadata', //LARAVEL: This would be set to saml_metadata route
+        'entityId' => 'http://localhost:8000/saml2/metadata', //LARAVEL: This would be set to saml_metadata route
         // Specifies info about where and how the <AuthnResponse> message MUST be
         // returned to the requester, in this case our SP.
         'assertionConsumerService' => array(
             // URL Location where the <Response> from the IdP will be returned
-            'url' => 'http://localhost:8000/acs', //LARAVEL: This would be set to saml_acs route
+            'url' => 'http://localhost:8000/saml2/acs', //LARAVEL: This would be set to saml_acs route
             // SAML protocol binding to be used when returning the <Response>
             // message.  Onelogin Toolkit supports for this endpoint the
             // HTTP-Redirect binding only
@@ -83,7 +90,7 @@ return $settings = array(
         // returned to the requester, in this case our SP.
         'singleLogoutService' => array(
             // URL Location where the <Response> from the IdP will be returned
-            'url' => 'http://localhost:8000/sls', //LARAVEL: This would be set to saml_sls route
+            'url' => 'http://localhost:8000/saml2/sls', //LARAVEL: This would be set to saml_sls route
             // SAML protocol binding to be used when returning the <Response>
             // message.  Onelogin Toolkit supports for this endpoint the
             // HTTP-Redirect binding only
@@ -94,11 +101,13 @@ return $settings = array(
     // Identity Provider Data that we want connect with our SP
     'idp' => array(
         // Identifier of the IdP entity  (must be a URI)
-        'entityId' => $idp_host . '',
+        // 'entityId' => $idp_host . '/saml2/idp/metadata.php',
+        'entityId' => $idp_host,
         // SSO endpoint info of the IdP. (Authentication Request protocol)
         'singleSignOnService' => array(
             // URL Target of the IdP where the SP will send the Authentication Request Message
-            'url' => $idp_host . '',
+            // 'url' => $idp_host . '/saml2/idp/SSOService.php',
+            'url' => $idp_host,
             // SAML protocol binding to be used when returning the <Response>
             // message.  Onelogin Toolkit supports for this endpoint the
             // HTTP-POST binding only
@@ -107,23 +116,26 @@ return $settings = array(
         // SLO endpoint info of the IdP.
         'singleLogoutService' => array(
             // URL Location of the IdP where the SP will send the SLO Request
-            'url' => $idp_host . '',
+            // 'url' => $idp_host . '/saml2/idp/SingleLogoutService.php',
+            'url' => $idp_host,
             // SAML protocol binding to be used when returning the <Response>
             // message.  Onelogin Toolkit supports for this endpoint the
             // HTTP-Redirect binding only
             'binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect',
         ),
         // Public x509 certificate of the IdP
-        // 'x509cert' => 'MIID/TCCAuWgAwIBAgIJAI4R3WyjjmB1MA0GCSqGSIb3DQEBCwUAMIGUMQswCQYDVQQGEwJBUjEVMBMGA1UECAwMQnVlbm9zIEFpcmVzMRUwEwYDVQQHDAxCdWVub3MgQWlyZXMxDDAKBgNVBAoMA1NJVTERMA8GA1UECwwIU2lzdGVtYXMxFDASBgNVBAMMC09yZy5TaXUuQ29tMSAwHgYJKoZIhvcNAQkBFhFhZG1pbmlAc2l1LmVkdS5hcjAeFw0xNDEyMDExNDM2MjVaFw0yNDExMzAxNDM2MjVaMIGUMQswCQYDVQQGEwJBUjEVMBMGA1UECAwMQnVlbm9zIEFpcmVzMRUwEwYDVQQHDAxCdWVub3MgQWlyZXMxDDAKBgNVBAoMA1NJVTERMA8GA1UECwwIU2lzdGVtYXMxFDASBgNVBAMMC09yZy5TaXUuQ29tMSAwHgYJKoZIhvcNAQkBFhFhZG1pbmlAc2l1LmVkdS5hcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMbzW/EpEv+qqZzfT1Buwjg9nnNNVrxkCfuR9fQiQw2tSouS5X37W5h7RmchRt54wsm046PDKtbSz1NpZT2GkmHN37yALW2lY7MyVUC7itv9vDAUsFr0EfKIdCKgxCKjrzkZ5ImbNvjxf7eA77PPGJnQ/UwXY7W+cvLkirp0K5uWpDk+nac5W0JXOCFR1BpPUJRbz2jFIEHyChRt7nsJZH6ejzNqK9lABEC76htNy1Ll/D3tUoPaqo8VlKW3N3MZE0DB9O7g65DmZIIlFqkaMH3ALd8adodJtOvqfDU/A6SxuwMfwDYPjoucykGDu1etRZ7dF2gd+W+1Pn7yizPT1q8CAwEAAaNQME4wHQYDVR0OBBYEFPsn8tUHN8XXf23ig5Qro3beP8BuMB8GA1UdIwQYMBaAFPsn8tUHN8XXf23ig5Qro3beP8BuMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAGu60odWFiK+DkQekozGnlpNBQz5lQ/bwmOWdktnQj6HYXu43e7sh9oZWArLYHEOyMUekKQAxOK51vbTHzzw66BZU91/nqvaOBfkJyZKGfluHbD0/hfOl/D5kONqI9kyTu4wkLQcYGyuIi75CJs15uA03FSuULQdY/Liv+czS/XYDyvtSLnu43VuAQWN321PQNhuGueIaLJANb2C5qq5ilTBUw6PxY9Z+vtMjAjTJGKEkE/tQs7CvzLPKXX3KTD9lIILmX5yUC3dLgjVKi1KGDqNApYGOMtjr5eoxPQrqDBmyx3flcy0dQTdLXud3UjWVW3N0PYgJtw5yBsS74QTGD4=',
-        'x509cert' => '',
+        //local
+        'x509cert' => 'MIICNTCCAZ6gAwIBAgIES343gjANBgkqhkiG9w0BAQUFADBVMQswCQYDVQQGEwJVUzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDU1vdW50YWluIFZpZXcxDTALBgNVBAoMBFdTTzIxEjAQBgNVBAMMCWxvY2FsaG9zdDAeFw0xMDAyMTkwNzAyMjZaFw0zNTAyMTMwNzAyMjZaMFUxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJDQTEWMBQGA1UEBwwNTW91bnRhaW4gVmlldzENMAsGA1UECgwEV1NPMjESMBAGA1UEAwwJbG9jYWxob3N0MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCUp/oV1vWc8/TkQSiAvTousMzOM4asB2iltr2QKozni5aVFu818MpOLZIr8LMnTzWllJvvaA5RAAdpbECb+48FjbBe0hseUdN5HpwvnH/DW8ZccGvk53I6Orq7hLCv1ZHtuOCokghz/ATrhyPq+QktMfXnRS4HrKGJTzxaCcU7OQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCBPAwDQYJKoZIhvcNAQEFBQADgYEAW5wPR7cr1LAdq+IrR44iQlRG5ITCZXY9hI0PygLP2rHANh+PYfTmxbuOnykNGyhM6FjFLbW2uZHQTY1jMrPprjOrmyK5sjJRO4d1DeGHT/YnIjs9JogRKv4XHECwLtIVdAbIdWHEtVZJyMSktcyysFcvuhPQK8Qc/E/Wq8uHSCo=',
+        //auth bandung
+        // 'x509cert' => 'MIICNTCCAZ6gAwIBAgIES343gjANBgkqhkiG9w0BAQUFADBVMQswCQYDVQQGEwJVUzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDU1vdW50YWluIFZpZXcxDTALBgNVBAoMBFdTTzIxEjAQBgNVBAMMCWxvY2FsaG9zdDAeFw0xMDAyMTkwNzAyMjZaFw0zNTAyMTMwNzAyMjZaMFUxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJDQTEWMBQGA1UEBwwNTW91bnRhaW4gVmlldzENMAsGA1UECgwEV1NPMjESMBAGA1UEAwwJbG9jYWxob3N0MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCUp/oV1vWc8/TkQSiAvTousMzOM4asB2iltr2QKozni5aVFu818MpOLZIr8LMnTzWllJvvaA5RAAdpbECb+48FjbBe0hseUdN5HpwvnH/DW8ZccGvk53I6Orq7hLCv1ZHtuOCokghz/ATrhyPq+QktMfXnRS4HrKGJTzxaCcU7OQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCBPAwDQYJKoZIhvcNAQEFBQADgYEAW5wPR7cr1LAdq+IrR44iQlRG5ITCZXY9hI0PygLP2rHANh+PYfTmxbuOnykNGyhM6FjFLbW2uZHQTY1jMrPprjOrmyK5sjJRO4d1DeGHT/YnIjs9JogRKv4XHECwLtIVdAbIdWHEtVZJyMSktcyysFcvuhPQK8Qc/E/Wq8uHSCo=', 
         /*
          *  Instead of use the whole x509cert you can use a fingerprint
          *  (openssl x509 -noout -fingerprint -in "idp.crt" to generate it)
          */
-         'certFingerprint' => '6bf8e136eb36d4a56ea05c7ae4b9a45b63bf975d',
-         // 'certFingerprint' => '30620ebdf70857ccd503669C296f30d214f5a3aa',
-         // 'certFingerprint' => '30620EBDF70857CCD503669C296F30D214F5A3AA'
-
+        // 'certFingerprint' => '9494938E6A77668CB24B1BF6DEDEA7EEBF1A52A9',
+        // 'certFingerprintAlgorithm' => 'sha1',
+        // 'certFingerprint' => '6bf8e136eb36d4a56ea05c7ae4b9a45b63bf975d',
+        // 'certFingerprint' => '9494938e6a77668cb24b1bf6dedea7eebf1a5249',
     ),
 
 
@@ -182,13 +194,13 @@ return $settings = array(
         // Set to false and no AuthContext will be sent in the AuthNRequest,
         // Set true or don't present thi parameter and you will get an AuthContext 'exact' 'urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport'
         // Set an array with the possible auth context values: array ('urn:oasis:names:tc:SAML:2.0:ac:classes:Password', 'urn:oasis:names:tc:SAML:2.0:ac:classes:X509'),
-        'requestedAuthnContext' => false,
+        'requestedAuthnContext' => true,
     ),
 
     // Contact information template, it is recommended to suply a technical and support contacts
     'contactPerson' => array(
         'technical' => array(
-            'givenName' => 'Tegar',
+            'givenName' => 'name',
             'emailAddress' => 'no@reply.com'
         ),
         'support' => array(

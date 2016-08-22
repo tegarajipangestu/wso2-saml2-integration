@@ -51,7 +51,6 @@ class Saml2LoginListener
     {
         $user = $event->getSaml2User();
         $attributes = $user->getAttributes();
-        preg_match('/WSO2.ORG\/(.*?)@(.*)/',$user->getUserId(),$matches);
         
         $roles = explode(',', $this->getClaimOrDefault($attributes, self::CLAIM_ROLE));
 
@@ -67,7 +66,7 @@ class Saml2LoginListener
           'mobile' => $this->getClaimOrDefault($attributes, self::CLAIM_MOBILE),
           // 'role' => $this->getClaimOrDefault($attributes, self::CLAIM_ROLE),
           'session_index' => $user->getSessionIndex(),
-          'name' => $matches[1]
+          'name' => $user->getUserId()
         );
         // dd($profile);
 
